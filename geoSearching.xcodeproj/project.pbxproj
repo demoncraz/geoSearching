@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA40A1FA8CADE00284D55 /* Constants.m */; };
+		3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */; };
+		3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */; };
+		3D7FA4161FA8CEC200284D55 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4151FA8CEC200284D55 /* UIView+Frame.m */; };
 		52E2AB861FA8890C00AECD4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB851FA8890C00AECD4F /* AppDelegate.m */; };
 		52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB881FA8890C00AECD4F /* ViewController.m */; };
 		52E2AB8C1FA8890C00AECD4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E2AB8A1FA8890C00AECD4F /* Main.storyboard */; };
@@ -15,8 +19,6 @@
 		52E2AB941FA8890C00AECD4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB931FA8890C00AECD4F /* main.m */; };
 		52E2AB9C1FA8958200AECD4F /* GeneticNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */; };
 		52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABA31FA8B26C00AECD4F /* LocationInfoModel.m */; };
-		52E2ABA81FA8B33B00AECD4F /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABA61FA8B33B00AECD4F /* LocationDetailViewController.m */; };
-		52E2ABA91FA8B33B00AECD4F /* LocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2ABA71FA8B33B00AECD4F /* LocationDetailViewController.xib */; };
 		52E2ABAD1FA8B87800AECD4F /* LocationDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABAB1FA8B87800AECD4F /* LocationDetailTableViewCell.m */; };
 		52E2ABAE1FA8B87800AECD4F /* LocationDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2ABAC1FA8B87800AECD4F /* LocationDetailTableViewCell.xib */; };
 		52E2ABB21FA8B95300AECD4F /* LocationDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABB01FA8B95300AECD4F /* LocationDescriptionTableViewCell.m */; };
@@ -29,6 +31,13 @@
 
 /* Begin PBXFileReference section */
 		0C7FDF871B0B7CC9B21EDF56 /* Pods-geoSearching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geoSearching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geoSearching/Pods-geoSearching.debug.xcconfig"; sourceTree = "<group>"; };
+		3D7FA4091FA8CADE00284D55 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3D7FA40A1FA8CADE00284D55 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		3D7FA40F1FA8CC8900284D55 /* LocationDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailView.h; sourceTree = "<group>"; };
+		3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDetailView.m; sourceTree = "<group>"; };
+		3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDetailView.xib; sourceTree = "<group>"; };
+		3D7FA4141FA8CEC200284D55 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		3D7FA4151FA8CEC200284D55 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		52E2AB811FA8890C00AECD4F /* geoSearching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoSearching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E2AB841FA8890C00AECD4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52E2AB851FA8890C00AECD4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,9 +52,6 @@
 		52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneticNavViewController.m; sourceTree = "<group>"; };
 		52E2ABA21FA8B26C00AECD4F /* LocationInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationInfoModel.h; sourceTree = "<group>"; };
 		52E2ABA31FA8B26C00AECD4F /* LocationInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationInfoModel.m; sourceTree = "<group>"; };
-		52E2ABA51FA8B33B00AECD4F /* LocationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
-		52E2ABA61FA8B33B00AECD4F /* LocationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
-		52E2ABA71FA8B33B00AECD4F /* LocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDetailViewController.xib; sourceTree = "<group>"; };
 		52E2ABAA1FA8B87800AECD4F /* LocationDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailTableViewCell.h; sourceTree = "<group>"; };
 		52E2ABAB1FA8B87800AECD4F /* LocationDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDetailTableViewCell.m; sourceTree = "<group>"; };
 		52E2ABAC1FA8B87800AECD4F /* LocationDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDetailTableViewCell.xib; sourceTree = "<group>"; };
@@ -94,8 +100,12 @@
 		52E2AB831FA8890C00AECD4F /* geoSearching */ = {
 			isa = PBXGroup;
 			children = (
+				3D7FA4141FA8CEC200284D55 /* UIView+Frame.h */,
+				3D7FA4151FA8CEC200284D55 /* UIView+Frame.m */,
 				52E2AB841FA8890C00AECD4F /* AppDelegate.h */,
 				52E2AB851FA8890C00AECD4F /* AppDelegate.m */,
+				3D7FA4091FA8CADE00284D55 /* Constants.h */,
+				3D7FA40A1FA8CADE00284D55 /* Constants.m */,
 				52E2ABA11FA8B25400AECD4F /* Find */,
 				52E2AB8A1FA8890C00AECD4F /* Main.storyboard */,
 				52E2AB8D1FA8890C00AECD4F /* Assets.xcassets */,
@@ -113,9 +123,6 @@
 				52E2AB881FA8890C00AECD4F /* ViewController.m */,
 				52E2AB9A1FA8958200AECD4F /* GeneticNavViewController.h */,
 				52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */,
-				52E2ABA51FA8B33B00AECD4F /* LocationDetailViewController.h */,
-				52E2ABA61FA8B33B00AECD4F /* LocationDetailViewController.m */,
-				52E2ABA71FA8B33B00AECD4F /* LocationDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -123,6 +130,9 @@
 		52E2AB9E1FA8B1D000AECD4F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D7FA40F1FA8CC8900284D55 /* LocationDetailView.h */,
+				3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */,
+				3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */,
 				52E2ABAA1FA8B87800AECD4F /* LocationDetailTableViewCell.h */,
 				52E2ABAB1FA8B87800AECD4F /* LocationDetailTableViewCell.m */,
 				52E2ABAC1FA8B87800AECD4F /* LocationDetailTableViewCell.xib */,
@@ -234,11 +244,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E2ABAE1FA8B87800AECD4F /* LocationDetailTableViewCell.xib in Resources */,
-				52E2ABA91FA8B33B00AECD4F /* LocationDetailViewController.xib in Resources */,
 				52E2AB911FA8890C00AECD4F /* LaunchScreen.storyboard in Resources */,
 				52E2AB8E1FA8890C00AECD4F /* Assets.xcassets in Resources */,
 				52E2AB8C1FA8890C00AECD4F /* Main.storyboard in Resources */,
 				52E2ABB31FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib in Resources */,
+				3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */,
 				52E2ABB81FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +298,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -298,11 +308,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D7FA4161FA8CEC200284D55 /* UIView+Frame.m in Sources */,
 				52E2ABAD1FA8B87800AECD4F /* LocationDetailTableViewCell.m in Sources */,
 				52E2ABB71FA8B9BA00AECD4F /* LocationPosterTableViewCell.m in Sources */,
 				52E2ABB21FA8B95300AECD4F /* LocationDescriptionTableViewCell.m in Sources */,
-				52E2ABA81FA8B33B00AECD4F /* LocationDetailViewController.m in Sources */,
 				52E2AB9C1FA8958200AECD4F /* GeneticNavViewController.m in Sources */,
+				3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */,
+				3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */,
 				52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */,
 				52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */,
 				52E2AB941FA8890C00AECD4F /* main.m in Sources */,
@@ -442,7 +454,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WC666G2XTQ;
+				DEVELOPMENT_TEAM = 4GZR2TYHP5;
 				INFOPLIST_FILE = geoSearching/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -458,7 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WC666G2XTQ;
+				DEVELOPMENT_TEAM = 4GZR2TYHP5;
 				INFOPLIST_FILE = geoSearching/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

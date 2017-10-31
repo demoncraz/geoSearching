@@ -9,7 +9,8 @@
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <MAMapKit/MAMapKit.h>
-#import "LocationDetailViewController.h"
+#import "Constants.h"
+#import "LocationDetailView.h"
 
 @interface ViewController ()<MAMapViewDelegate>
 
@@ -23,11 +24,20 @@
 
 @property (nonatomic, strong) MAAnnotationView *selAnnotationView;
 
-@property (nonatomic, strong) LocationDetailViewController *locationDetailVC;
+@property (nonatomic, strong) LocationDetailView *locationDetailView;
 
 @end
 
 @implementation ViewController
+
+- (LocationDetailView *)locationDetailView {
+    if (_locationDetailView == nil) {
+        _locationDetailView = [[LocationDetailView alloc] initWithFrame:CGRectMake(0, ScreenH, ScreenW, ScreenH)];
+        [self.view addSubview:_locationDetailView];
+        _locationDetailView.frame = CGRectMake(0, ScreenH, ScreenW, ScreenH);
+    }
+    return _locationDetailView;
+}
 
 - (AMapLocationManager *)locationManager {
     if (_locationManager == nil) {
@@ -51,12 +61,13 @@
     [self.view addSubview:mapView];
     mapView.language = MAMapLanguageEn;
     mapView.showsScale = NO;
-    
+    mapView.showsCompass = NO;
     mapView.delegate = self;
     
     mapView.showsUserLocation = YES;
     mapView.userTrackingMode = MAUserTrackingModeFollow;
     
+    [self.view addSubview:self.locationDetailView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -91,6 +102,19 @@
     
 }
 
+- (void)showLocationDetailView:(BOOL)show {
+    if (show) {
+        self.locationDetailView.CC_y = ScreenH;
+        [UIView animateWithDuration:0.25 animations:^{
+            self.locationDetailView.CC_y = ScreenH - 144 - 44;
+        }];
+    } else {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.locationDetailView.CC_y = ScreenH;
+        }];
+    }
+}
+
 #pragma mark - MAMapViewDelegate
 
 - (void)mapView:(MAMapView *)mapView didAddAnnotationViews:(NSArray *)views {
@@ -104,19 +128,18 @@
 {
     if ([annotation isKindOfClass:[MAPointAnnotation class]])
     {
-        NSArray *imageNames = @[@"001", @"002", @"003", @"004"];
-        int random = arc4random_uniform(4);
-        NSString *imageName = imageNames[random];
+//        NSArray *imageNames = @[@"001", @"002", @"003", @"004"];
+//        int random = arc4random_uniform(4);
+//        NSString *imageName = imageNames[random];
         static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
         MAAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
         if (view == nil) {
             view = [[MAAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
         }
-        view.canShowCallout = YES;
-        //        view.animatesDrop = YES;
+        view.canShowCallout = NO;
         view.draggable = NO;
-        UIImage *image = [UIImage imageNamed:imageName];
-        view.tag = random;
+        UIImage *image = [UIImage imageNamed:@"bluePoint"];
+//        view.tag = random;
         view.image = image;
         return view;
     }
@@ -135,21 +158,19 @@
 }
 
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view {
-    NSInteger index = view.tag;
-    NSArray *selImageNames = @[@"001_selected", @"002_selected", @"003_selected", @"004_selected"];
-    NSString *selImageName = selImageNames[index];
-    view.image = [UIImage imageNamed:selImageName];
-    
-//    LocationDetailViewController *locationDetailVC = [[LocationDetailViewController alloc] init];
-////    [self presentViewController:locationDetailVC animated:YES completion:nil];
-//    [self presentSemiViewController:locationDetailVC withOptions:nil completion:nil dismissBlock:nil];
+//    NSInteger index = view.tag;
+//    NSArray *selImageNames = @[@"001_selected", @"002_selected", @"003_selected", @"004_selected"];
+//    NSString *selImageName = selImageNames[index];
+    view.image = [UIImage imageNamed:@"bluePoint_selected"];
+
+    [self showLocationDetailView:YES];
 }
 
 - (void)mapView:(MAMapView *)mapView didDeselectAnnotationView:(MAAnnotationView *)view {
-    NSInteger index = view.tag;
-    NSArray *selImageNames = @[@"001", @"002", @"003", @"004"];
-    NSString *selImageName = selImageNames[index];
-    view.image = [UIImage imageNamed:selImageName];
+    view.image = [UIImage imageNamed:@"bluePoint"];
+    [self showLocationDetailView:NO];
 }
+
+
 
 @end

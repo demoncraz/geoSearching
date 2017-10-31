@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="197" id="KGk-i7-Jjw" customClass="LocationPosterTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-9b-VCn">
+                        <rect key="frame" x="125" y="10" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="70" id="92j-Jl-tgG"/>
+                            <constraint firstAttribute="width" constant="70" id="Fnp-AR-z1C"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-Hh-Sn2">
+                        <rect key="frame" x="121.5" y="90" width="77" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="postd on 05/17/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-DJ-eon">
+                        <rect key="frame" x="86" y="115" width="148" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-t0-fhb">
+                        <rect key="frame" x="133" y="145" width="55" height="41.5"/>
+                        <state key="normal" title="Contact"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GBC-t0-fhb" firstAttribute="centerX" secondItem="NGf-DJ-eon" secondAttribute="centerX" id="2Ax-YV-N8w"/>
+                    <constraint firstAttribute="bottom" secondItem="GBC-t0-fhb" secondAttribute="bottom" constant="10" id="8Zs-jK-dkD"/>
+                    <constraint firstItem="JIA-9b-VCn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ago-33-Xgo"/>
+                    <constraint firstItem="NGf-DJ-eon" firstAttribute="top" secondItem="QHq-Hh-Sn2" secondAttribute="bottom" constant="5" id="JgD-tR-pXh"/>
+                    <constraint firstItem="GBC-t0-fhb" firstAttribute="top" secondItem="NGf-DJ-eon" secondAttribute="bottom" constant="10" id="OgK-Kj-600"/>
+                    <constraint firstItem="JIA-9b-VCn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QCf-aW-1TG"/>
+                    <constraint firstItem="QHq-Hh-Sn2" firstAttribute="centerX" secondItem="JIA-9b-VCn" secondAttribute="centerX" id="Rli-xw-yuY"/>
+                    <constraint firstItem="QHq-Hh-Sn2" firstAttribute="top" secondItem="JIA-9b-VCn" secondAttribute="bottom" constant="10" id="Wau-8e-ch8"/>
+                    <constraint firstItem="NGf-DJ-eon" firstAttribute="centerX" secondItem="QHq-Hh-Sn2" secondAttribute="centerX" id="XXJ-6K-hYf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="25" y="128.5"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -13,9 +13,22 @@
 		52E2AB8E1FA8890C00AECD4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2AB8D1FA8890C00AECD4F /* Assets.xcassets */; };
 		52E2AB911FA8890C00AECD4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52E2AB8F1FA8890C00AECD4F /* LaunchScreen.storyboard */; };
 		52E2AB941FA8890C00AECD4F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB931FA8890C00AECD4F /* main.m */; };
+		52E2AB9C1FA8958200AECD4F /* GeneticNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */; };
+		52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABA31FA8B26C00AECD4F /* LocationInfoModel.m */; };
+		52E2ABA81FA8B33B00AECD4F /* LocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABA61FA8B33B00AECD4F /* LocationDetailViewController.m */; };
+		52E2ABA91FA8B33B00AECD4F /* LocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2ABA71FA8B33B00AECD4F /* LocationDetailViewController.xib */; };
+		52E2ABAD1FA8B87800AECD4F /* LocationDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABAB1FA8B87800AECD4F /* LocationDetailTableViewCell.m */; };
+		52E2ABAE1FA8B87800AECD4F /* LocationDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2ABAC1FA8B87800AECD4F /* LocationDetailTableViewCell.xib */; };
+		52E2ABB21FA8B95300AECD4F /* LocationDescriptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABB01FA8B95300AECD4F /* LocationDescriptionTableViewCell.m */; };
+		52E2ABB31FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2ABB11FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib */; };
+		52E2ABB71FA8B9BA00AECD4F /* LocationPosterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2ABB51FA8B9BA00AECD4F /* LocationPosterTableViewCell.m */; };
+		52E2ABB81FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52E2ABB61FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib */; };
+		52E2ABBA1FA8BE8900AECD4F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52E2ABB91FA8BE8900AECD4F /* QuartzCore.framework */; };
+		ABF09240650398D4AD571581 /* libPods-geoSearching.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC86FC9040F07206ABAC730 /* libPods-geoSearching.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C7FDF871B0B7CC9B21EDF56 /* Pods-geoSearching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geoSearching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geoSearching/Pods-geoSearching.debug.xcconfig"; sourceTree = "<group>"; };
 		52E2AB811FA8890C00AECD4F /* geoSearching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoSearching.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E2AB841FA8890C00AECD4F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		52E2AB851FA8890C00AECD4F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -26,6 +39,25 @@
 		52E2AB901FA8890C00AECD4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52E2AB921FA8890C00AECD4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E2AB931FA8890C00AECD4F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		52E2AB9A1FA8958200AECD4F /* GeneticNavViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneticNavViewController.h; sourceTree = "<group>"; };
+		52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeneticNavViewController.m; sourceTree = "<group>"; };
+		52E2ABA21FA8B26C00AECD4F /* LocationInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationInfoModel.h; sourceTree = "<group>"; };
+		52E2ABA31FA8B26C00AECD4F /* LocationInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationInfoModel.m; sourceTree = "<group>"; };
+		52E2ABA51FA8B33B00AECD4F /* LocationDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailViewController.h; sourceTree = "<group>"; };
+		52E2ABA61FA8B33B00AECD4F /* LocationDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDetailViewController.m; sourceTree = "<group>"; };
+		52E2ABA71FA8B33B00AECD4F /* LocationDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDetailViewController.xib; sourceTree = "<group>"; };
+		52E2ABAA1FA8B87800AECD4F /* LocationDetailTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailTableViewCell.h; sourceTree = "<group>"; };
+		52E2ABAB1FA8B87800AECD4F /* LocationDetailTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDetailTableViewCell.m; sourceTree = "<group>"; };
+		52E2ABAC1FA8B87800AECD4F /* LocationDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDetailTableViewCell.xib; sourceTree = "<group>"; };
+		52E2ABAF1FA8B95300AECD4F /* LocationDescriptionTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDescriptionTableViewCell.h; sourceTree = "<group>"; };
+		52E2ABB01FA8B95300AECD4F /* LocationDescriptionTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDescriptionTableViewCell.m; sourceTree = "<group>"; };
+		52E2ABB11FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		52E2ABB41FA8B9BA00AECD4F /* LocationPosterTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationPosterTableViewCell.h; sourceTree = "<group>"; };
+		52E2ABB51FA8B9BA00AECD4F /* LocationPosterTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationPosterTableViewCell.m; sourceTree = "<group>"; };
+		52E2ABB61FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationPosterTableViewCell.xib; sourceTree = "<group>"; };
+		52E2ABB91FA8BE8900AECD4F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		AEE4057BAF92F64DB2A0E6BD /* Pods-geoSearching.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geoSearching.release.xcconfig"; path = "Pods/Target Support Files/Pods-geoSearching/Pods-geoSearching.release.xcconfig"; sourceTree = "<group>"; };
+		DCC86FC9040F07206ABAC730 /* libPods-geoSearching.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-geoSearching.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2ABBA1FA8BE8900AECD4F /* QuartzCore.framework in Frameworks */,
+				ABF09240650398D4AD571581 /* libPods-geoSearching.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +78,8 @@
 			children = (
 				52E2AB831FA8890C00AECD4F /* geoSearching */,
 				52E2AB821FA8890C00AECD4F /* Products */,
+				EE44EBE3622FF0877E4E30C7 /* Pods */,
+				FC9DAB9EB311616CED424001 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +96,7 @@
 			children = (
 				52E2AB841FA8890C00AECD4F /* AppDelegate.h */,
 				52E2AB851FA8890C00AECD4F /* AppDelegate.m */,
-				52E2AB871FA8890C00AECD4F /* ViewController.h */,
-				52E2AB881FA8890C00AECD4F /* ViewController.m */,
+				52E2ABA11FA8B25400AECD4F /* Find */,
 				52E2AB8A1FA8890C00AECD4F /* Main.storyboard */,
 				52E2AB8D1FA8890C00AECD4F /* Assets.xcassets */,
 				52E2AB8F1FA8890C00AECD4F /* LaunchScreen.storyboard */,
@@ -71,6 +106,73 @@
 			path = geoSearching;
 			sourceTree = "<group>";
 		};
+		52E2AB9D1FA8B1BE00AECD4F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				52E2AB871FA8890C00AECD4F /* ViewController.h */,
+				52E2AB881FA8890C00AECD4F /* ViewController.m */,
+				52E2AB9A1FA8958200AECD4F /* GeneticNavViewController.h */,
+				52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */,
+				52E2ABA51FA8B33B00AECD4F /* LocationDetailViewController.h */,
+				52E2ABA61FA8B33B00AECD4F /* LocationDetailViewController.m */,
+				52E2ABA71FA8B33B00AECD4F /* LocationDetailViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		52E2AB9E1FA8B1D000AECD4F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52E2ABAA1FA8B87800AECD4F /* LocationDetailTableViewCell.h */,
+				52E2ABAB1FA8B87800AECD4F /* LocationDetailTableViewCell.m */,
+				52E2ABAC1FA8B87800AECD4F /* LocationDetailTableViewCell.xib */,
+				52E2ABAF1FA8B95300AECD4F /* LocationDescriptionTableViewCell.h */,
+				52E2ABB01FA8B95300AECD4F /* LocationDescriptionTableViewCell.m */,
+				52E2ABB11FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib */,
+				52E2ABB41FA8B9BA00AECD4F /* LocationPosterTableViewCell.h */,
+				52E2ABB51FA8B9BA00AECD4F /* LocationPosterTableViewCell.m */,
+				52E2ABB61FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52E2AB9F1FA8B24100AECD4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				52E2ABA21FA8B26C00AECD4F /* LocationInfoModel.h */,
+				52E2ABA31FA8B26C00AECD4F /* LocationInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		52E2ABA11FA8B25400AECD4F /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				52E2AB9D1FA8B1BE00AECD4F /* Controllers */,
+				52E2AB9F1FA8B24100AECD4F /* Model */,
+				52E2AB9E1FA8B1D000AECD4F /* Views */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		EE44EBE3622FF0877E4E30C7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C7FDF871B0B7CC9B21EDF56 /* Pods-geoSearching.debug.xcconfig */,
+				AEE4057BAF92F64DB2A0E6BD /* Pods-geoSearching.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FC9DAB9EB311616CED424001 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				52E2ABB91FA8BE8900AECD4F /* QuartzCore.framework */,
+				DCC86FC9040F07206ABAC730 /* libPods-geoSearching.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -78,9 +180,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52E2AB971FA8890C00AECD4F /* Build configuration list for PBXNativeTarget "geoSearching" */;
 			buildPhases = (
+				C7320E4A8F7DF0F0D9D568F2 /* [CP] Check Pods Manifest.lock */,
 				52E2AB7D1FA8890C00AECD4F /* Sources */,
 				52E2AB7E1FA8890C00AECD4F /* Frameworks */,
 				52E2AB7F1FA8890C00AECD4F /* Resources */,
+				7F65EFE0F7AF05CAFD514516 /* [CP] Embed Pods Frameworks */,
+				5FE90562B1C467E2182569B0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,19 +233,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2ABAE1FA8B87800AECD4F /* LocationDetailTableViewCell.xib in Resources */,
+				52E2ABA91FA8B33B00AECD4F /* LocationDetailViewController.xib in Resources */,
 				52E2AB911FA8890C00AECD4F /* LaunchScreen.storyboard in Resources */,
 				52E2AB8E1FA8890C00AECD4F /* Assets.xcassets in Resources */,
 				52E2AB8C1FA8890C00AECD4F /* Main.storyboard in Resources */,
+				52E2ABB31FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib in Resources */,
+				52E2ABB81FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5FE90562B1C467E2182569B0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-geoSearching/Pods-geoSearching-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F65EFE0F7AF05CAFD514516 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-geoSearching/Pods-geoSearching-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C7320E4A8F7DF0F0D9D568F2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52E2AB7D1FA8890C00AECD4F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E2ABAD1FA8B87800AECD4F /* LocationDetailTableViewCell.m in Sources */,
+				52E2ABB71FA8B9BA00AECD4F /* LocationPosterTableViewCell.m in Sources */,
+				52E2ABB21FA8B95300AECD4F /* LocationDescriptionTableViewCell.m in Sources */,
+				52E2ABA81FA8B33B00AECD4F /* LocationDetailViewController.m in Sources */,
+				52E2AB9C1FA8958200AECD4F /* GeneticNavViewController.m in Sources */,
+				52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */,
 				52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */,
 				52E2AB941FA8890C00AECD4F /* main.m in Sources */,
 				52E2AB861FA8890C00AECD4F /* AppDelegate.m in Sources */,
@@ -275,11 +438,13 @@
 		};
 		52E2AB981FA8890C00AECD4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C7FDF871B0B7CC9B21EDF56 /* Pods-geoSearching.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WC666G2XTQ;
 				INFOPLIST_FILE = geoSearching/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = neo.geoSearching;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,11 +454,13 @@
 		};
 		52E2AB991FA8890C00AECD4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE4057BAF92F64DB2A0E6BD /* Pods-geoSearching.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WC666G2XTQ;
 				INFOPLIST_FILE = geoSearching/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = neo.geoSearching;
 				PRODUCT_NAME = "$(TARGET_NAME)";

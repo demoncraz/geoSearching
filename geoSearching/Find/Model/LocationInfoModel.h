@@ -11,10 +11,21 @@
 
 @property (nonatomic, copy) NSString *locTitle;
 
-@property (nonatomic, copy) NSString *locDescription;
+@property (nonatomic, copy) NSString *locLikeCount;
 
 @property (nonatomic, copy) NSString *locDistance;
 
+@property (nonatomic, copy) NSString *difficultyLevel;
+@property (nonatomic, copy) NSString *rewardLevel;
 @property (nonatomic, copy) NSString *locVisitedTimes;
+
+@property (nonatomic, copy) NSString *locDescription;
+
+@property (nonatomic, copy) NSString *posterName;
+@property (nonatomic, copy) NSString *postDate;
+
+@property (nonatomic, assign) NSInteger detailType;
+
++ (instancetype)randomModel;
 
 @end

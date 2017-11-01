@@ -13,7 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LocationDetailView">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="606"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nQ-fo-nXq">
@@ -51,24 +51,45 @@
                             <color key="textColor" red="0.58823529409999997" green="0.58823529409999997" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lDO-bs-13y">
+                            <rect key="frame" x="0.0" y="79.5" width="375" height="0.5"/>
+                            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="DUj-09-thp"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-5m-Tmg">
+                            <rect key="frame" x="325" y="25" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="JYm-0X-NQV"/>
+                                <constraint firstAttribute="height" constant="30" id="fi1-u7-IW3"/>
+                            </constraints>
+                            <state key="normal" image="up"/>
+                            <state key="selected" image="down"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="gY0-Kp-QjJ" firstAttribute="centerY" secondItem="ddU-Ew-x1m" secondAttribute="centerY" id="1Q4-VF-9OQ"/>
                         <constraint firstItem="XP5-99-H7F" firstAttribute="centerY" secondItem="pBf-oF-NeC" secondAttribute="centerY" id="DN5-u2-gKo"/>
+                        <constraint firstItem="Ph3-5m-Tmg" firstAttribute="centerY" secondItem="5nQ-fo-nXq" secondAttribute="centerY" id="DX9-BY-EaC"/>
+                        <constraint firstAttribute="trailing" secondItem="Ph3-5m-Tmg" secondAttribute="trailing" constant="20" id="IvA-sc-GqX"/>
                         <constraint firstItem="7XO-Fc-Zdw" firstAttribute="leading" secondItem="5nQ-fo-nXq" secondAttribute="leading" constant="20" id="K8x-Mh-sQH"/>
                         <constraint firstAttribute="height" constant="80" id="Mfc-Zm-rBi"/>
                         <constraint firstItem="pBf-oF-NeC" firstAttribute="centerY" secondItem="ddU-Ew-x1m" secondAttribute="centerY" id="TIo-3Q-ihi"/>
+                        <constraint firstAttribute="bottom" secondItem="lDO-bs-13y" secondAttribute="bottom" id="TvV-Eb-seH"/>
                         <constraint firstItem="7XO-Fc-Zdw" firstAttribute="top" secondItem="5nQ-fo-nXq" secondAttribute="top" constant="20" id="VJC-PS-e1d"/>
                         <constraint firstItem="pBf-oF-NeC" firstAttribute="leading" secondItem="gY0-Kp-QjJ" secondAttribute="trailing" constant="20" id="Vjf-oy-ToE"/>
                         <constraint firstItem="gY0-Kp-QjJ" firstAttribute="leading" secondItem="ddU-Ew-x1m" secondAttribute="trailing" constant="5" id="XE9-tU-6Ub"/>
                         <constraint firstItem="XP5-99-H7F" firstAttribute="leading" secondItem="pBf-oF-NeC" secondAttribute="trailing" constant="5" id="de5-Gd-2EK"/>
                         <constraint firstItem="ddU-Ew-x1m" firstAttribute="top" secondItem="7XO-Fc-Zdw" secondAttribute="bottom" constant="5" id="kix-dr-FJq"/>
                         <constraint firstItem="ddU-Ew-x1m" firstAttribute="leading" secondItem="5nQ-fo-nXq" secondAttribute="leading" constant="20" id="lSH-7Z-kmE"/>
+                        <constraint firstItem="lDO-bs-13y" firstAttribute="leading" secondItem="5nQ-fo-nXq" secondAttribute="leading" id="p67-CZ-svf"/>
+                        <constraint firstAttribute="trailing" secondItem="lDO-bs-13y" secondAttribute="trailing" id="qg5-2G-vLO"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AO9-NX-euz">
-                    <rect key="frame" x="0.0" y="80" width="375" height="587"/>
+                    <rect key="frame" x="0.0" y="80" width="375" height="526"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
@@ -85,12 +106,20 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="distanceLabel" destination="XP5-99-H7F" id="2oy-8K-89I"/>
+                <outlet property="expandButton" destination="Ph3-5m-Tmg" id="vnE-9B-V6q"/>
+                <outlet property="likeLabel" destination="gY0-Kp-QjJ" id="nsw-yI-u24"/>
                 <outlet property="tableView" destination="AO9-NX-euz" id="ysU-1G-ja8"/>
+                <outlet property="titleTextLabel" destination="7XO-Fc-Zdw" id="J5W-5m-lkg"/>
+                <outlet property="titleView" destination="5nQ-fo-nXq" id="mUC-zA-fkb"/>
             </connections>
+            <point key="canvasLocation" x="32.5" y="92"/>
         </view>
     </objects>
     <resources>
         <image name="distance" width="50" height="50"/>
+        <image name="down" width="20" height="11"/>
         <image name="like" width="50" height="50"/>
+        <image name="up" width="20" height="11"/>
     </resources>
 </document>

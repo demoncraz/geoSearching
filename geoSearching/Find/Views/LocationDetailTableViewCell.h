@@ -9,4 +9,6 @@
 
 @interface LocationDetailTableViewCell : UITableViewCell
 
+@property (nonatomic, assign) NSInteger type;
+
 @end

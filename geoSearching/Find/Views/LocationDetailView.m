@@ -16,6 +16,12 @@ static NSString * const postInfoCellId = @"postInfoCellId";
 
 @interface LocationDetailView()<UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *titleView;
+@property (weak, nonatomic) IBOutlet UIButton *expandButton;
+@property (nonatomic, assign, getter=isViewHidden) BOOL viewHidden;
+@property (weak, nonatomic) IBOutlet UILabel *titleTextLabel;
+@property (weak, nonatomic) IBOutlet UILabel *likeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
 @end
 
@@ -27,11 +33,31 @@ static NSString * const postInfoCellId = @"postInfoCellId";
     if (self) {
         self = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
         //register cell
+        self.tableView.delegate = self;
+        self.tableView.dataSource = self;
+        self.tableView.estimatedRowHeight = 100;
         [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LocationDetailTableViewCell class]) bundle:nil] forCellReuseIdentifier:detailCellId];
         [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LocationDescriptionTableViewCell class]) bundle:nil] forCellReuseIdentifier:descriptionCellId];
         [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LocationPosterTableViewCell class]) bundle:nil] forCellReuseIdentifier:postInfoCellId];
+        
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleTapped)];
+        [self.titleView addGestureRecognizer:tap];
+        
+        self.viewHidden = YES;
     }
     return self;
+}
+
+- (void)titleTapped {
+    self.viewHidden = !self.viewHidden;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(LocationDetailView:didClickToShow:)]) {
+        [self.delegate LocationDetailView:self didClickToShow:!self.viewHidden];
+    }
+}
+
+- (void)setViewHidden:(BOOL)viewHidden {
+    _viewHidden = viewHidden;
+    self.expandButton.selected = !viewHidden;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -41,9 +67,11 @@ static NSString * const postInfoCellId = @"postInfoCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         LocationDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:detailCellId];
+        cell.type = self.dataSource.detailType;
         return cell;
     } else if (indexPath.row == 1) {
         LocationDescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:descriptionCellId];
+        cell.locDescription = self.dataSource.locDescription;
         return cell;
     } else {
         LocationPosterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:postInfoCellId];
@@ -51,5 +79,12 @@ static NSString * const postInfoCellId = @"postInfoCellId";
     }
 }
 
+- (void)setDataSource:(LocationInfoModel *)dataSource {
+    _dataSource = dataSource;
+    self.titleTextLabel.text = dataSource.locTitle;
+    self.likeLabel.text = dataSource.locLikeCount;
+    self.distanceLabel.text = dataSource.locDistance;
+    [self.tableView reloadData];
+}
 
 @end

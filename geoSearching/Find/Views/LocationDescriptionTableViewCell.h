@@ -9,4 +9,6 @@
 
 @interface LocationDescriptionTableViewCell : UITableViewCell
 
+@property (nonatomic, copy) NSString *locDescription;
+
 @end

@@ -19,27 +19,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-9b-VCn">
-                        <rect key="frame" x="125" y="10" width="70" height="70"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-9b-VCn">
+                        <rect key="frame" x="125" y="20" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="92j-Jl-tgG"/>
                             <constraint firstAttribute="width" constant="70" id="Fnp-AR-z1C"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-Hh-Sn2">
-                        <rect key="frame" x="121.5" y="90" width="77" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted by: Kevin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-Hh-Sn2">
+                        <rect key="frame" x="100" y="100" width="120.5" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="postd on 05/17/2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGf-DJ-eon">
-                        <rect key="frame" x="86" y="115" width="148" height="20"/>
+                        <rect key="frame" x="86" y="125" width="148" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-t0-fhb">
-                        <rect key="frame" x="133" y="145" width="55" height="41.5"/>
+                        <rect key="frame" x="125.5" y="155" width="70" height="31.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="dm3-NJ-hIr"/>
+                        </constraints>
                         <state key="normal" title="Contact"/>
                     </button>
                 </subviews>
@@ -49,14 +52,23 @@
                     <constraint firstItem="JIA-9b-VCn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Ago-33-Xgo"/>
                     <constraint firstItem="NGf-DJ-eon" firstAttribute="top" secondItem="QHq-Hh-Sn2" secondAttribute="bottom" constant="5" id="JgD-tR-pXh"/>
                     <constraint firstItem="GBC-t0-fhb" firstAttribute="top" secondItem="NGf-DJ-eon" secondAttribute="bottom" constant="10" id="OgK-Kj-600"/>
-                    <constraint firstItem="JIA-9b-VCn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="QCf-aW-1TG"/>
+                    <constraint firstItem="JIA-9b-VCn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="QCf-aW-1TG"/>
                     <constraint firstItem="QHq-Hh-Sn2" firstAttribute="centerX" secondItem="JIA-9b-VCn" secondAttribute="centerX" id="Rli-xw-yuY"/>
                     <constraint firstItem="QHq-Hh-Sn2" firstAttribute="top" secondItem="JIA-9b-VCn" secondAttribute="bottom" constant="10" id="Wau-8e-ch8"/>
                     <constraint firstItem="NGf-DJ-eon" firstAttribute="centerX" secondItem="QHq-Hh-Sn2" secondAttribute="centerX" id="XXJ-6K-hYf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="contactButton" destination="GBC-t0-fhb" id="735-BR-98S"/>
+                <outlet property="iconImageVIew" destination="JIA-9b-VCn" id="PUp-Od-6pf"/>
+                <outlet property="postTimeLabel" destination="NGf-DJ-eon" id="XIi-pi-Hcd"/>
+                <outlet property="posterNameLabel" destination="QHq-Hh-Sn2" id="zaW-Zn-e5h"/>
+            </connections>
             <point key="canvasLocation" x="25" y="128.5"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="posterIcon" width="220" height="220"/>
+    </resources>
 </document>

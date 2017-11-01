@@ -10,6 +10,9 @@
 
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
+#define ColorWithRGB(r,g,b,a) [UIColor colorWithRed:(r / 255.0) green:(g / 255.0) blue:(b / 255.0) alpha:a]
+#define ColorWithWhite(w) [UIColor colorWithRed:(w / 255.0) green:(w / 255.0) blue:(w / 255.0) alpha:1]
+#define DefaultBlueColor ColorWithRGB(33,150,243,1)
 
 @interface Constants : NSObject
 

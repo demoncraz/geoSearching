@@ -9,4 +9,10 @@
 
 @interface LocationPosterTableViewCell : UITableViewCell
 
+@property (nonatomic, copy) NSString *posterName;
+
+@property (nonatomic, copy) NSString *posterIcon;
+
+@property (nonatomic, copy) NSString *postTime;
+
 @end

@@ -24,7 +24,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1318" y="-364"/>
+            <point key="canvasLocation" x="1298" y="-609"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="oDi-yy-8Gi">
+            <objects>
+                <viewController id="waR-Kc-zM6" customClass="MessageViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Eu-w0-5A9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ycm-Fm-Lz4">
+                                <rect key="frame" x="137.5" y="298.5" width="100" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="V8I-wT-ybX"/>
+                                    <constraint firstAttribute="height" constant="70" id="bsP-CE-iPE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Currently Not Available" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e7-xa-QrR">
+                                <rect key="frame" x="104" y="388.5" width="166" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ycm-Fm-Lz4" firstAttribute="centerX" secondItem="0Eu-w0-5A9" secondAttribute="centerX" id="E7c-ov-kZN"/>
+                            <constraint firstItem="ycm-Fm-Lz4" firstAttribute="centerY" secondItem="0Eu-w0-5A9" secondAttribute="centerY" id="GrM-hI-Qjt"/>
+                            <constraint firstItem="1e7-xa-QrR" firstAttribute="top" secondItem="ycm-Fm-Lz4" secondAttribute="bottom" constant="20" id="q8D-cN-eq4"/>
+                            <constraint firstItem="1e7-xa-QrR" firstAttribute="centerX" secondItem="ycm-Fm-Lz4" secondAttribute="centerX" id="rCH-0J-vv4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qwY-vj-mzV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="w2Q-mc-1MC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fEb-5w-Of7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1263" y="88"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="K6G-XG-KMY">
@@ -37,17 +74,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="OLJ-4X-j4J" kind="relationship" relationship="viewControllers" id="zhd-pu-Ubp"/>
+                        <segue destination="uVg-wA-Wbr" kind="relationship" relationship="viewControllers" id="6NV-s5-wu8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oy4-1R-JbW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-209" y="-355"/>
         </scene>
-        <!--Find-->
+        <!--Genetic Nav View Controller-->
         <scene sceneID="TbU-oo-gHf">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nP7-tr-v6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OLJ-4X-j4J" customClass="GeneticNavViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find" image="local" id="VRs-Tm-eSh"/>
+                    <tabBarItem key="tabBarItem" title="" image="local_disable" selectedImage="local" id="VRs-Tm-eSh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QnT-1B-S0Q">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -58,12 +97,34 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="PyU-GV-9A5"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nP7-tr-v6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="511" y="-363"/>
+            <point key="canvasLocation" x="606" y="-608"/>
+        </scene>
+        <!--Genetic Nav View Controller-->
+        <scene sceneID="o6E-yM-aca">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uVg-wA-Wbr" customClass="GeneticNavViewController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="message_disable" selectedImage="message" id="KFG-ig-5eZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pHZ-zQ-1iZ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="waR-Kc-zM6" kind="relationship" relationship="rootViewController" id="HJo-iE-Gcm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vjC-Rx-SgN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="582" y="88"/>
         </scene>
     </scenes>
     <resources>
         <image name="local" width="25" height="30"/>
+        <image name="local_disable" width="25" height="30"/>
+        <image name="message" width="30" height="30"/>
+        <image name="message_bg" width="140" height="140"/>
+        <image name="message_disable" width="30" height="30"/>
     </resources>
 </document>

@@ -74,6 +74,24 @@
     mapView.userTrackingMode = MAUserTrackingModeFollow;
 
     [self.view addSubview:self.locationDetailView];
+    
+    [self setupLocateMeButton];
+}
+
+- (void)setupLocateMeButton {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button addTarget:self action:@selector(locateMeBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(10, 10, 45, 45);
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOffset = CGSizeMake(1, 1);
+    button.layer.shadowOpacity = 0.6;
+    button.layer.shadowRadius = 2;
+    [button setImage:[UIImage imageNamed:@"locateMe"] forState:0];
+    [self.view addSubview:button];
+}
+
+- (void)locateMeBtnClick {
+    [self.mapView setCenterCoordinate:self.currentCoord animated:YES];
 }
 
 //- (void)viewDidLoad {
@@ -140,56 +158,6 @@
     }];
 }
 
-#pragma mark - MKMapViewDelegate
-//- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views {
-//    MKAnnotationView *view = views[0];
-//    if ([view.annotation isKindOfClass:[MKUserLocation class]]) {
-//        view.canShowCallout = NO;
-//    }
-//}
-//
-//- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-//    if ([annotation isKindOfClass:[MAPointAnnotation class]])
-//    {
-//        static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
-//        MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
-//        if (view == nil) {
-//            view = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:pointReuseIndentifier];
-//        }
-//        view.canShowCallout = NO;
-//        view.draggable = NO;
-//        UIImage *image = [UIImage imageNamed:@"bluePoint"];
-//        view.image = image;
-//        return view;
-//    }
-//    return nil;
-//}
-//
-//- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
-//    CLLocationCoordinate2D coord = mapView.region.center;
-//    self.currentCoord = coord;
-//    if (!self.hasUpdatedAnnotes) {
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [self generateRandomLocationWithRegion:mapView.region];
-//        });
-//    }
-//    self.hasUpdatedAnnotes = YES;
-//}
-//
-//
-//- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
-//
-//    view.image = [UIImage imageNamed:@"bluePoint_selected"];
-//    [self showLocationDetailView:YES];
-//}
-//
-//- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
-//    view.image = [UIImage imageNamed:@"bluePoint"];
-//    [self showLocationDetailView:NO];
-//}
-
-//#pragma mark - MAMapViewDelegate
-
 - (void)mapView:(MAMapView *)mapView didAddAnnotationViews:(NSArray *)views {
     MAAnnotationView *view = views[0];
     if ([view.annotation isKindOfClass:[MAUserLocation class]]) {
@@ -234,8 +202,19 @@
 }
 
 - (void)mapView:(MAMapView *)mapView didSelectAnnotationView:(MAAnnotationView *)view {
+    CLLocationCoordinate2D coord = view.annotation.coordinate;
+    MAMapPoint selectedPoint = MAMapPointForCoordinate(coord);
+    MAMapPoint currentPint = MAMapPointForCoordinate(self.currentCoord);
+    CLLocationDistance distance = MAMetersBetweenMapPoints(selectedPoint, currentPint);
+
     view.image = [UIImage imageNamed:@"bluePoint_selected_1"];
     LocationInfoModel *model = [LocationInfoModel randomModel];
+    if (distance < 1000) {
+        model.locDistance = [NSString stringWithFormat:@"%.0fm", distance];
+    } else {
+        
+        model.locDistance = [NSString stringWithFormat:@"%.1fkm", distance * 0.001];
+    }
     self.locationDetailView.dataSource = model;
     [self showLocationDetailView:YES];
 }

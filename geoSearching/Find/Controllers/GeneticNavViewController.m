@@ -25,6 +25,7 @@
     [[UITabBar appearance] setTranslucent:NO];
     [[UITabBar appearance] setBackgroundColor:[UIColor whiteColor]];
     [UITabBar appearance].shadowImage = [UIImage new];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)viewDidLoad {

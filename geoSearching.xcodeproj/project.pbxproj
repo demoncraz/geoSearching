@@ -11,6 +11,26 @@
 		3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */; };
 		3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */; };
 		3D7FA4161FA8CEC200284D55 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4151FA8CEC200284D55 /* UIView+Frame.m */; };
+		3DBFD7561FAA32A20001DC04 /* DiscoverTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7551FAA32A20001DC04 /* DiscoverTableViewController.m */; };
+		3DBFD7591FAA32AD0001DC04 /* ProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7581FAA32AD0001DC04 /* ProfileTableViewController.m */; };
+		3DBFD75D1FAB56E30001DC04 /* SearchMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD75B1FAB56E30001DC04 /* SearchMainViewController.m */; };
+		3DBFD75E1FAB56E30001DC04 /* SearchMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DBFD75C1FAB56E30001DC04 /* SearchMainViewController.xib */; };
+		3DBFD7611FAB5DC00001DC04 /* FilterTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7601FAB5DC00001DC04 /* FilterTableViewController.m */; };
+		3DBFD7631FAB5DCF0001DC04 /* FilterTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DBFD7621FAB5DCF0001DC04 /* FilterTableViewController.storyboard */; };
+		3DBFD7671FAB67180001DC04 /* ListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7651FAB67180001DC04 /* ListTableViewCell.m */; };
+		3DBFD7681FAB67180001DC04 /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DBFD7661FAB67180001DC04 /* ListTableViewCell.xib */; };
+		3DBFD76D1FAB8E3E0001DC04 /* TraditionalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD76C1FAB8E3D0001DC04 /* TraditionalTableViewController.m */; };
+		3DBFD7701FAB8E460001DC04 /* ActTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD76F1FAB8E460001DC04 /* ActTableViewController.m */; };
+		3DBFD7731FAB8E4E0001DC04 /* CouponTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7721FAB8E4E0001DC04 /* CouponTableViewController.m */; };
+		3DBFD77D1FAB90E70001DC04 /* CCTabView.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7751FAB8EA30001DC04 /* CCTabView.h */; };
+		3DBFD77E1FAB90E70001DC04 /* CCTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7761FAB8EA30001DC04 /* CCTabView.m */; };
+		3DBFD77F1FAB90E70001DC04 /* CCTopTabCollectionViewCell.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7771FAB8EA30001DC04 /* CCTopTabCollectionViewCell.h */; };
+		3DBFD7801FAB90E70001DC04 /* CCTopTabCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7781FAB8EA30001DC04 /* CCTopTabCollectionViewCell.m */; };
+		3DBFD7811FAB90E70001DC04 /* CCTopTabViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7791FAB8EA30001DC04 /* CCTopTabViewController.h */; };
+		3DBFD7821FAB90E70001DC04 /* CCTopTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD77A1FAB8EA30001DC04 /* CCTopTabViewController.m */; };
+		3DBFD7831FAB90E70001DC04 /* UIViewController+Property.h in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD77C1FAB906D0001DC04 /* UIViewController+Property.h */; };
+		3DBFD7841FAB90E70001DC04 /* UIViewController+Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD77B1FAB906D0001DC04 /* UIViewController+Property.m */; };
+		3DBFD7871FAB94200001DC04 /* TaskBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DBFD7861FAB94200001DC04 /* TaskBaseTableViewController.m */; };
 		52AFBACB1FAA0083000D2100 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52AFBACA1FAA0082000D2100 /* MessageViewController.m */; };
 		52E2AB861FA8890C00AECD4F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB851FA8890C00AECD4F /* AppDelegate.m */; };
 		52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E2AB881FA8890C00AECD4F /* ViewController.m */; };
@@ -38,6 +58,35 @@
 		3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationDetailView.xib; sourceTree = "<group>"; };
 		3D7FA4141FA8CEC200284D55 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		3D7FA4151FA8CEC200284D55 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		3DBFD7541FAA32A20001DC04 /* DiscoverTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DiscoverTableViewController.h; sourceTree = "<group>"; };
+		3DBFD7551FAA32A20001DC04 /* DiscoverTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiscoverTableViewController.m; sourceTree = "<group>"; };
+		3DBFD7571FAA32AD0001DC04 /* ProfileTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileTableViewController.h; sourceTree = "<group>"; };
+		3DBFD7581FAA32AD0001DC04 /* ProfileTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileTableViewController.m; sourceTree = "<group>"; };
+		3DBFD75A1FAB56E30001DC04 /* SearchMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchMainViewController.h; sourceTree = "<group>"; };
+		3DBFD75B1FAB56E30001DC04 /* SearchMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchMainViewController.m; sourceTree = "<group>"; };
+		3DBFD75C1FAB56E30001DC04 /* SearchMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchMainViewController.xib; sourceTree = "<group>"; };
+		3DBFD75F1FAB5DC00001DC04 /* FilterTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FilterTableViewController.h; sourceTree = "<group>"; };
+		3DBFD7601FAB5DC00001DC04 /* FilterTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FilterTableViewController.m; sourceTree = "<group>"; };
+		3DBFD7621FAB5DCF0001DC04 /* FilterTableViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterTableViewController.storyboard; sourceTree = "<group>"; };
+		3DBFD7641FAB67180001DC04 /* ListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListTableViewCell.h; sourceTree = "<group>"; };
+		3DBFD7651FAB67180001DC04 /* ListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListTableViewCell.m; sourceTree = "<group>"; };
+		3DBFD7661FAB67180001DC04 /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		3DBFD76B1FAB8E3D0001DC04 /* TraditionalTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TraditionalTableViewController.h; sourceTree = "<group>"; };
+		3DBFD76C1FAB8E3D0001DC04 /* TraditionalTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TraditionalTableViewController.m; sourceTree = "<group>"; };
+		3DBFD76E1FAB8E460001DC04 /* ActTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActTableViewController.h; sourceTree = "<group>"; };
+		3DBFD76F1FAB8E460001DC04 /* ActTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActTableViewController.m; sourceTree = "<group>"; };
+		3DBFD7711FAB8E4E0001DC04 /* CouponTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CouponTableViewController.h; sourceTree = "<group>"; };
+		3DBFD7721FAB8E4E0001DC04 /* CouponTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CouponTableViewController.m; sourceTree = "<group>"; };
+		3DBFD7751FAB8EA30001DC04 /* CCTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCTabView.h; sourceTree = "<group>"; };
+		3DBFD7761FAB8EA30001DC04 /* CCTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCTabView.m; sourceTree = "<group>"; };
+		3DBFD7771FAB8EA30001DC04 /* CCTopTabCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCTopTabCollectionViewCell.h; sourceTree = "<group>"; };
+		3DBFD7781FAB8EA30001DC04 /* CCTopTabCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCTopTabCollectionViewCell.m; sourceTree = "<group>"; };
+		3DBFD7791FAB8EA30001DC04 /* CCTopTabViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CCTopTabViewController.h; sourceTree = "<group>"; };
+		3DBFD77A1FAB8EA30001DC04 /* CCTopTabViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CCTopTabViewController.m; sourceTree = "<group>"; };
+		3DBFD77B1FAB906D0001DC04 /* UIViewController+Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Property.m"; sourceTree = "<group>"; };
+		3DBFD77C1FAB906D0001DC04 /* UIViewController+Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Property.h"; sourceTree = "<group>"; };
+		3DBFD7851FAB94200001DC04 /* TaskBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskBaseTableViewController.h; sourceTree = "<group>"; };
+		3DBFD7861FAB94200001DC04 /* TaskBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskBaseTableViewController.m; sourceTree = "<group>"; };
 		52AFBAC91FAA0082000D2100 /* MessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		52AFBACA1FAA0082000D2100 /* MessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		52E2AB811FA8890C00AECD4F /* geoSearching.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geoSearching.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +129,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3DBFD7521FAA326F0001DC04 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				3DBFD7571FAA32AD0001DC04 /* ProfileTableViewController.h */,
+				3DBFD7581FAA32AD0001DC04 /* ProfileTableViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		3DBFD7531FAA328C0001DC04 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				3DBFD7541FAA32A20001DC04 /* DiscoverTableViewController.h */,
+				3DBFD7551FAA32A20001DC04 /* DiscoverTableViewController.m */,
+				3DBFD7851FAB94200001DC04 /* TaskBaseTableViewController.h */,
+				3DBFD7861FAB94200001DC04 /* TaskBaseTableViewController.m */,
+				3DBFD76B1FAB8E3D0001DC04 /* TraditionalTableViewController.h */,
+				3DBFD76C1FAB8E3D0001DC04 /* TraditionalTableViewController.m */,
+				3DBFD76E1FAB8E460001DC04 /* ActTableViewController.h */,
+				3DBFD76F1FAB8E460001DC04 /* ActTableViewController.m */,
+				3DBFD7711FAB8E4E0001DC04 /* CouponTableViewController.h */,
+				3DBFD7721FAB8E4E0001DC04 /* CouponTableViewController.m */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		3DBFD7741FAB8EA30001DC04 /* TopTabViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3DBFD7751FAB8EA30001DC04 /* CCTabView.h */,
+				3DBFD7761FAB8EA30001DC04 /* CCTabView.m */,
+				3DBFD7771FAB8EA30001DC04 /* CCTopTabCollectionViewCell.h */,
+				3DBFD7781FAB8EA30001DC04 /* CCTopTabCollectionViewCell.m */,
+				3DBFD7791FAB8EA30001DC04 /* CCTopTabViewController.h */,
+				3DBFD77A1FAB8EA30001DC04 /* CCTopTabViewController.m */,
+				3DBFD77C1FAB906D0001DC04 /* UIViewController+Property.h */,
+				3DBFD77B1FAB906D0001DC04 /* UIViewController+Property.m */,
+			);
+			path = TopTabViewController;
+			sourceTree = "<group>";
+		};
 		52AFBAC81FA9F763000D2100 /* Mesasge */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +200,9 @@
 		52E2AB831FA8890C00AECD4F /* geoSearching */ = {
 			isa = PBXGroup;
 			children = (
+				3DBFD7741FAB8EA30001DC04 /* TopTabViewController */,
+				3DBFD7531FAA328C0001DC04 /* Discover */,
+				3DBFD7521FAA326F0001DC04 /* Profile */,
 				3D7FA4141FA8CEC200284D55 /* UIView+Frame.h */,
 				3D7FA4151FA8CEC200284D55 /* UIView+Frame.m */,
 				52E2AB841FA8890C00AECD4F /* AppDelegate.h */,
@@ -134,6 +227,12 @@
 				52E2AB881FA8890C00AECD4F /* ViewController.m */,
 				52E2AB9A1FA8958200AECD4F /* GeneticNavViewController.h */,
 				52E2AB9B1FA8958200AECD4F /* GeneticNavViewController.m */,
+				3DBFD75A1FAB56E30001DC04 /* SearchMainViewController.h */,
+				3DBFD75B1FAB56E30001DC04 /* SearchMainViewController.m */,
+				3DBFD75C1FAB56E30001DC04 /* SearchMainViewController.xib */,
+				3DBFD75F1FAB5DC00001DC04 /* FilterTableViewController.h */,
+				3DBFD7601FAB5DC00001DC04 /* FilterTableViewController.m */,
+				3DBFD7621FAB5DCF0001DC04 /* FilterTableViewController.storyboard */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -153,6 +252,9 @@
 				52E2ABB41FA8B9BA00AECD4F /* LocationPosterTableViewCell.h */,
 				52E2ABB51FA8B9BA00AECD4F /* LocationPosterTableViewCell.m */,
 				52E2ABB61FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib */,
+				3DBFD7641FAB67180001DC04 /* ListTableViewCell.h */,
+				3DBFD7651FAB67180001DC04 /* ListTableViewCell.m */,
+				3DBFD7661FAB67180001DC04 /* ListTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,11 +358,14 @@
 			files = (
 				52E2ABAE1FA8B87800AECD4F /* LocationDetailTableViewCell.xib in Resources */,
 				52E2AB911FA8890C00AECD4F /* LaunchScreen.storyboard in Resources */,
+				3DBFD7631FAB5DCF0001DC04 /* FilterTableViewController.storyboard in Resources */,
 				52E2AB8E1FA8890C00AECD4F /* Assets.xcassets in Resources */,
 				52E2AB8C1FA8890C00AECD4F /* Main.storyboard in Resources */,
 				52E2ABB31FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib in Resources */,
 				3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */,
 				52E2ABB81FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib in Resources */,
+				3DBFD75E1FAB56E30001DC04 /* SearchMainViewController.xib in Resources */,
+				3DBFD7681FAB67180001DC04 /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,17 +424,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DBFD77D1FAB90E70001DC04 /* CCTabView.h in Sources */,
+				3DBFD77E1FAB90E70001DC04 /* CCTabView.m in Sources */,
+				3DBFD77F1FAB90E70001DC04 /* CCTopTabCollectionViewCell.h in Sources */,
+				3DBFD7801FAB90E70001DC04 /* CCTopTabCollectionViewCell.m in Sources */,
+				3DBFD7811FAB90E70001DC04 /* CCTopTabViewController.h in Sources */,
+				3DBFD7821FAB90E70001DC04 /* CCTopTabViewController.m in Sources */,
+				3DBFD7831FAB90E70001DC04 /* UIViewController+Property.h in Sources */,
+				3DBFD7841FAB90E70001DC04 /* UIViewController+Property.m in Sources */,
 				3D7FA4161FA8CEC200284D55 /* UIView+Frame.m in Sources */,
+				3DBFD7671FAB67180001DC04 /* ListTableViewCell.m in Sources */,
 				52E2ABAD1FA8B87800AECD4F /* LocationDetailTableViewCell.m in Sources */,
 				52E2ABB71FA8B9BA00AECD4F /* LocationPosterTableViewCell.m in Sources */,
+				3DBFD7871FAB94200001DC04 /* TaskBaseTableViewController.m in Sources */,
+				3DBFD7611FAB5DC00001DC04 /* FilterTableViewController.m in Sources */,
+				3DBFD7591FAA32AD0001DC04 /* ProfileTableViewController.m in Sources */,
 				52E2ABB21FA8B95300AECD4F /* LocationDescriptionTableViewCell.m in Sources */,
+				3DBFD7701FAB8E460001DC04 /* ActTableViewController.m in Sources */,
 				52E2AB9C1FA8958200AECD4F /* GeneticNavViewController.m in Sources */,
+				3DBFD7731FAB8E4E0001DC04 /* CouponTableViewController.m in Sources */,
+				3DBFD7561FAA32A20001DC04 /* DiscoverTableViewController.m in Sources */,
 				3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */,
 				52AFBACB1FAA0083000D2100 /* MessageViewController.m in Sources */,
 				3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */,
+				3DBFD75D1FAB56E30001DC04 /* SearchMainViewController.m in Sources */,
 				52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */,
 				52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */,
 				52E2AB941FA8890C00AECD4F /* main.m in Sources */,
+				3DBFD76D1FAB8E3E0001DC04 /* TraditionalTableViewController.m in Sources */,
 				52E2AB861FA8890C00AECD4F /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

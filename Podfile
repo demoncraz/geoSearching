@@ -8,9 +8,10 @@ target 'geoSearching' do
   # Pods for geoSearching
 
 pod 'AMapLocation'
-pod ‘AMapSearch’
-pod 'AMap2DMap’
-pod ‘SVProgressHUD’
-
+pod 'AMapSearch'
+pod 'AMap2DMap'
+pod 'SVProgressHUD'
+pod 'AMap2DMap'
+pod 'Masonry'
 
 end

@@ -6,12 +6,14 @@ PODS:
     - AMapFoundation (~> 1.4)
   - AMapSearch (5.3.0):
     - AMapFoundation (~> 1.2)
+  - Masonry (1.0.2)
   - SVProgressHUD (2.2.1)
 
 DEPENDENCIES:
   - AMap2DMap
   - AMapLocation
   - AMapSearch
+  - Masonry
   - SVProgressHUD
 
 SPEC CHECKSUMS:
@@ -19,8 +21,9 @@ SPEC CHECKSUMS:
   AMapFoundation: 6c0471c9a6a0ad17dad46e3d800ad56ca170f82a
   AMapLocation: 47b62b5381a66e4d0c2931b70ffde72682427896
   AMapSearch: beb01c6b2e7be18fb4898e97162fedf144420c6f
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
 
-PODFILE CHECKSUM: be978bc9288fb2454975e91518a92759b6e2caf6
+PODFILE CHECKSUM: 65a617eb3b9705b5ffca86e89a654e89961a4b69
 
 COCOAPODS: 1.1.1

@@ -15,6 +15,8 @@
 
 @property (nonatomic, copy) NSString *locDistance;
 
+@property (nonatomic, copy) NSString *detailImage;
+
 @property (nonatomic, copy) NSString *difficultyLevel;
 @property (nonatomic, copy) NSString *rewardLevel;
 @property (nonatomic, copy) NSString *locVisitedTimes;
@@ -27,5 +29,7 @@
 @property (nonatomic, assign) NSInteger detailType;
 
 + (instancetype)randomModel;
+
++ (instancetype)modelWithTitle:(NSString *)title;
 
 @end

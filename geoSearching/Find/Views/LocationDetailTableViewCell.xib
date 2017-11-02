@@ -12,73 +12,43 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="164" id="KGk-i7-Jjw" customClass="LocationDetailTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="216" id="KGk-i7-Jjw" customClass="LocationDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="164"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="215.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDv-94-g1q">
-                        <rect key="frame" x="133.5" y="20" width="53" height="20.5"/>
+                        <rect key="frame" x="133.5" y="20" width="53" height="35.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail01" translatesAutoresizingMaskIntoConstraints="NO" id="AIM-UY-7Ln">
-                        <rect key="frame" x="55" y="50.5" width="70" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="70" id="gez-BX-KLK"/>
-                            <constraint firstAttribute="width" constant="70" id="xdn-HT-vkF"/>
-                        </constraints>
-                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="detail02" translatesAutoresizingMaskIntoConstraints="NO" id="grn-MI-uoa">
-                        <rect key="frame" x="195" y="50.5" width="70" height="70"/>
+                        <rect key="frame" x="60" y="75.5" width="200" height="120"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="70" id="DyQ-TG-AjB"/>
-                            <constraint firstAttribute="width" constant="70" id="jnz-Tk-OUh"/>
+                            <constraint firstAttribute="height" constant="120" id="DyQ-TG-AjB"/>
+                            <constraint firstAttribute="width" constant="200" id="jnz-Tk-OUh"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0J-uQ-edV">
-                        <rect key="frame" x="73" y="125.5" width="34.5" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Samon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-VE-D05">
-                        <rect key="frame" x="206.5" y="125.5" width="47.5" height="18"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="grn-MI-uoa" firstAttribute="width" secondItem="AIM-UY-7Ln" secondAttribute="width" id="6rP-S0-GEK"/>
-                    <constraint firstItem="jVE-VE-D05" firstAttribute="centerX" secondItem="grn-MI-uoa" secondAttribute="centerX" id="EHf-Pg-ESf"/>
-                    <constraint firstItem="M0J-uQ-edV" firstAttribute="centerX" secondItem="AIM-UY-7Ln" secondAttribute="centerX" id="PjM-Gj-8ek"/>
-                    <constraint firstItem="AIM-UY-7Ln" firstAttribute="top" secondItem="oDv-94-g1q" secondAttribute="bottom" constant="10" id="S76-ew-WLe"/>
+                    <constraint firstAttribute="bottom" secondItem="grn-MI-uoa" secondAttribute="bottom" constant="20" id="2af-5t-eD9"/>
                     <constraint firstItem="oDv-94-g1q" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="bst-CI-8eq"/>
-                    <constraint firstItem="M0J-uQ-edV" firstAttribute="top" secondItem="AIM-UY-7Ln" secondAttribute="bottom" constant="5" id="cbI-d2-Ja4"/>
-                    <constraint firstItem="jVE-VE-D05" firstAttribute="top" secondItem="grn-MI-uoa" secondAttribute="bottom" constant="5" id="dD5-WU-X9c"/>
-                    <constraint firstAttribute="bottom" secondItem="jVE-VE-D05" secondAttribute="bottom" constant="20" id="jlB-cO-pO1"/>
-                    <constraint firstAttribute="bottom" secondItem="M0J-uQ-edV" secondAttribute="bottom" constant="20" id="neA-Fx-ACG"/>
-                    <constraint firstItem="grn-MI-uoa" firstAttribute="top" secondItem="AIM-UY-7Ln" secondAttribute="top" id="rB6-HZ-zgg"/>
+                    <constraint firstItem="grn-MI-uoa" firstAttribute="top" secondItem="oDv-94-g1q" secondAttribute="bottom" constant="20" id="lwi-D3-jnu"/>
                     <constraint firstItem="oDv-94-g1q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vfa-ya-6pa"/>
-                    <constraint firstItem="grn-MI-uoa" firstAttribute="height" secondItem="AIM-UY-7Ln" secondAttribute="height" id="wbj-5G-0Or"/>
-                    <constraint firstItem="AIM-UY-7Ln" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-70" id="zYA-3R-pJf"/>
-                    <constraint firstItem="grn-MI-uoa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="70" id="zg7-Lf-cSI"/>
+                    <constraint firstItem="grn-MI-uoa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="zg7-Lf-cSI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="imageView1" destination="AIM-UY-7Ln" id="tqW-sM-JZ1"/>
-                <outlet property="imageView2" destination="grn-MI-uoa" id="sJ8-dl-FAf"/>
+                <outlet property="detailImageView" destination="grn-MI-uoa" id="9sh-vP-mYK"/>
             </connections>
-            <point key="canvasLocation" x="25" y="94"/>
+            <point key="canvasLocation" x="25" y="120"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="detail01" width="418" height="292"/>
         <image name="detail02" width="414" height="265"/>
     </resources>
 </document>

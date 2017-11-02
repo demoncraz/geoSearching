@@ -14,6 +14,8 @@
 #define ColorWithWhite(w) [UIColor colorWithRed:(w / 255.0) green:(w / 255.0) blue:(w / 255.0) alpha:1]
 #define DefaultBlueColor ColorWithRGB(33,150,243,1)
 
+#define DefineWeakSelf __weak typeof(self) weakSelf = self
+
 @interface Constants : NSObject
 
 @end

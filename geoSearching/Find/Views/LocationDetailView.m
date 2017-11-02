@@ -67,7 +67,8 @@ static NSString * const postInfoCellId = @"postInfoCellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 0) {
         LocationDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:detailCellId];
-        cell.type = self.dataSource.detailType;
+//        cell.type = self.dataSource.detailType;
+        cell.image = self.dataSource.detailImage;
         return cell;
     } else if (indexPath.row == 1) {
         LocationDescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:descriptionCellId];
@@ -84,6 +85,7 @@ static NSString * const postInfoCellId = @"postInfoCellId";
     self.titleTextLabel.text = dataSource.locTitle;
     self.likeLabel.text = dataSource.locLikeCount;
     self.distanceLabel.text = dataSource.locDistance;
+    [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
     [self.tableView reloadData];
 }
 

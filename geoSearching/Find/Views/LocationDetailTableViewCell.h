@@ -11,4 +11,6 @@
 
 @property (nonatomic, assign) NSInteger type;
 
+@property (nonatomic, copy) NSString *image;
+
 @end

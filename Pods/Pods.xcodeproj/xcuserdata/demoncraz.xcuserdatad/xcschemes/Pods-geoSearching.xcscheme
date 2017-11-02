@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8BAA688592625ACD6D2AC8ECDF8628E3'
+               BlueprintIdentifier = 'A7CF3029DAFA7E1AEFE54CC30235E397'
                BlueprintName = 'Pods-geoSearching'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-geoSearching.a'>

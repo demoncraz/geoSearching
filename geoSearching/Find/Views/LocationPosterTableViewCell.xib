@@ -19,15 +19,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="196.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-9b-VCn">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JIA-9b-VCn">
                         <rect key="frame" x="125" y="20" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="92j-Jl-tgG"/>
                             <constraint firstAttribute="width" constant="70" id="Fnp-AR-z1C"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted by: Kevin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-Hh-Sn2">
-                        <rect key="frame" x="100" y="100" width="120.5" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posted by: Marion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHq-Hh-Sn2">
+                        <rect key="frame" x="94.5" y="100" width="131" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <color key="textColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -69,6 +69,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="posterIcon" width="220" height="220"/>
+        <image name="posterIcon" width="148" height="201"/>
     </resources>
 </document>

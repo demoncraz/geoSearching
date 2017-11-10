@@ -23,6 +23,9 @@ static NSString * const postInfoCellId = @"postInfoCellId";
 @property (weak, nonatomic) IBOutlet UILabel *likeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *buttonLabel;
+
 @end
 
 @implementation LocationDetailView
@@ -57,7 +60,7 @@ static NSString * const postInfoCellId = @"postInfoCellId";
 
 - (void)setViewHidden:(BOOL)viewHidden {
     _viewHidden = viewHidden;
-    self.expandButton.selected = !viewHidden;
+//    self.expandButton.selected = !viewHidden;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -87,6 +90,22 @@ static NSString * const postInfoCellId = @"postInfoCellId";
     self.distanceLabel.text = dataSource.locDistance;
     [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:NO];
     [self.tableView reloadData];
+}
+
+- (IBAction)navigateBtnClick:(UIButton *)button {
+    button.selected = !button.selected;
+    if (button.selected) {
+        if ([self.delegate respondsToSelector:@selector(LocationDetailView:didClickNavigateToCord:cancel:)]) {
+            [self.delegate LocationDetailView:self didClickNavigateToCord:self.locationCoord cancel:NO];
+        }
+        self.buttonLabel.text = @"STOP";
+    } else {
+        if ([self.delegate respondsToSelector:@selector(LocationDetailView:didClickNavigateToCord:cancel:)]) {
+            [self.delegate LocationDetailView:self didClickNavigateToCord:self.locationCoord cancel:YES];
+        }
+        self.buttonLabel.text = @"START";
+    }
+    
 }
 
 @end

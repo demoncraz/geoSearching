@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "UIView+Frame.h"
+#import "DataManager.h"
 
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height

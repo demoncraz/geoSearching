@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1DE1571FB5E15500B4E0E9 /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE1551FB5E15500B4E0E9 /* CompassViewController.m */; };
+		3D1DE1581FB5E15500B4E0E9 /* CompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DE1561FB5E15500B4E0E9 /* CompassViewController.xib */; };
+		3D1DE15B1FB5F72900B4E0E9 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE15A1FB5F72900B4E0E9 /* DataManager.m */; };
 		3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA40A1FA8CADE00284D55 /* Constants.m */; };
 		3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */; };
 		3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */; };
@@ -51,6 +54,11 @@
 
 /* Begin PBXFileReference section */
 		0C7FDF871B0B7CC9B21EDF56 /* Pods-geoSearching.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geoSearching.debug.xcconfig"; path = "Pods/Target Support Files/Pods-geoSearching/Pods-geoSearching.debug.xcconfig"; sourceTree = "<group>"; };
+		3D1DE1541FB5E15500B4E0E9 /* CompassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CompassViewController.h; sourceTree = "<group>"; };
+		3D1DE1551FB5E15500B4E0E9 /* CompassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CompassViewController.m; sourceTree = "<group>"; };
+		3D1DE1561FB5E15500B4E0E9 /* CompassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompassViewController.xib; sourceTree = "<group>"; };
+		3D1DE1591FB5F72900B4E0E9 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		3D1DE15A1FB5F72900B4E0E9 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		3D7FA4091FA8CADE00284D55 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3D7FA40A1FA8CADE00284D55 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3D7FA40F1FA8CC8900284D55 /* LocationDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailView.h; sourceTree = "<group>"; };
@@ -233,6 +241,9 @@
 				3DBFD75F1FAB5DC00001DC04 /* FilterTableViewController.h */,
 				3DBFD7601FAB5DC00001DC04 /* FilterTableViewController.m */,
 				3DBFD7621FAB5DCF0001DC04 /* FilterTableViewController.storyboard */,
+				3D1DE1541FB5E15500B4E0E9 /* CompassViewController.h */,
+				3D1DE1551FB5E15500B4E0E9 /* CompassViewController.m */,
+				3D1DE1561FB5E15500B4E0E9 /* CompassViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +275,8 @@
 			children = (
 				52E2ABA21FA8B26C00AECD4F /* LocationInfoModel.h */,
 				52E2ABA31FA8B26C00AECD4F /* LocationInfoModel.m */,
+				3D1DE1591FB5F72900B4E0E9 /* DataManager.h */,
+				3D1DE15A1FB5F72900B4E0E9 /* DataManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -366,6 +379,7 @@
 				52E2ABB81FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib in Resources */,
 				3DBFD75E1FAB56E30001DC04 /* SearchMainViewController.xib in Resources */,
 				3DBFD7681FAB67180001DC04 /* ListTableViewCell.xib in Resources */,
+				3D1DE1581FB5E15500B4E0E9 /* CompassViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +445,7 @@
 				3DBFD7811FAB90E70001DC04 /* CCTopTabViewController.h in Sources */,
 				3DBFD7821FAB90E70001DC04 /* CCTopTabViewController.m in Sources */,
 				3DBFD7831FAB90E70001DC04 /* UIViewController+Property.h in Sources */,
+				3D1DE1571FB5E15500B4E0E9 /* CompassViewController.m in Sources */,
 				3DBFD7841FAB90E70001DC04 /* UIViewController+Property.m in Sources */,
 				3D7FA4161FA8CEC200284D55 /* UIView+Frame.m in Sources */,
 				3DBFD7671FAB67180001DC04 /* ListTableViewCell.m in Sources */,
@@ -445,6 +460,7 @@
 				3DBFD7731FAB8E4E0001DC04 /* CouponTableViewController.m in Sources */,
 				3DBFD7561FAA32A20001DC04 /* DiscoverTableViewController.m in Sources */,
 				3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */,
+				3D1DE15B1FB5F72900B4E0E9 /* DataManager.m in Sources */,
 				52AFBACB1FAA0083000D2100 /* MessageViewController.m in Sources */,
 				3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */,
 				3DBFD75D1FAB56E30001DC04 /* SearchMainViewController.m in Sources */,

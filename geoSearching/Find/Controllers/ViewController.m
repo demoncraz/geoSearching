@@ -17,6 +17,7 @@
 #import "GeneticNavViewController.h"
 #import <MapKit/MapKit.h>
 #import "ListTableViewCell.h"
+#import "CompassViewController.h"
 
 @interface ViewController ()<LocationDetailViewDelegate, MKMapViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -40,9 +41,41 @@
 
 @property (nonatomic, strong) NSArray *mapIcons;
 
+@property (nonatomic, strong) MKPolyline *line;
+
+@property (nonatomic, strong) NSArray *leftItems;
+@property (nonatomic, strong) NSArray *rightItems;
+@property (nonatomic, strong) UIBarButtonItem *navigateItem;
+@property (nonatomic, strong) UIBarButtonItem *compassItem;
+
+
+@property (nonatomic, strong) id<MKAnnotation> selectedAnnotation;
+@property (nonatomic, strong) NSMutableArray *annotations;
+
 @end
 
 @implementation ViewController
+
+- (NSMutableArray *)annotations {
+    if (_annotations == nil) {
+        _annotations = [[NSMutableArray alloc] init];
+    }
+    return _annotations;
+}
+
+- (UIBarButtonItem *)navigateItem {
+    if (_navigateItem == nil) {
+        _navigateItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"topNavigate"] style:UIBarButtonItemStylePlain target:self action:@selector(navToDesClick)];
+    }
+    return _navigateItem;
+}
+
+- (UIBarButtonItem *)compassItem {
+    if (_compassItem == nil) {
+        _compassItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"compass"] style:UIBarButtonItemStylePlain target:self action:@selector(compassClick)];
+    }
+    return _compassItem;
+}
 
 - (NSArray *)mapIcons {
     if (_mapIcons == nil) {
@@ -118,6 +151,13 @@
 //    UIBarButtonItem *changeListItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"list"] style:UIBarButtonItemStylePlain target:self action:@selector(changeListClick)];
     UIBarButtonItem *changeListItem = [[UIBarButtonItem alloc] initWithCustomView:changeButton];
     
+    //地图图层
+//    UIButton *mapButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    [mapButton addTarget:self action:@selector(mapBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+//    [mapButton setImage:[UIImage imageNamed:@"mountains"] forState:0];
+//    [mapButton setImage:[UIImage imageNamed:@"standardMap"] forState:UIControlStateSelected];
+//    UIBarButtonItem *mapItem = [[UIBarButtonItem alloc] initWithCustomView:mapButton];
+    
     self.navigationItem.rightBarButtonItems = @[changeListItem, filterItem];
     
     [self setupLocateMeButton];
@@ -165,12 +205,31 @@
     button.layer.shadowRadius = 2;
     [button setImage:[UIImage imageNamed:@"locateMe"] forState:0];
     [self.baseView addSubview:button];
+    
+    UIButton *mapTypeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [mapTypeButton addTarget:self action:@selector(mapTypeClick:) forControlEvents:UIControlEventTouchUpInside];
+    mapTypeButton.frame = CGRectMake(10, 55, 45, 45);
+    mapTypeButton.layer.shadowColor = [UIColor blackColor].CGColor;
+    mapTypeButton.layer.shadowOffset = CGSizeMake(1, 1);
+    mapTypeButton.layer.shadowOpacity = 0.6;
+    mapTypeButton.layer.shadowRadius = 2;
+    [mapTypeButton setImage:[UIImage imageNamed:@"mountains"] forState:0];
+    [mapTypeButton setImage:[UIImage imageNamed:@"standardMap"] forState:UIControlStateSelected];
+    [self.baseView addSubview:mapTypeButton];
+    
 }
 
 - (void)locateMeBtnClick {
     [self.mapView setCenterCoordinate:self.currentCoord animated:YES];
 }
-
+- (void)mapTypeClick:(UIButton *)button {
+    button.selected = !button.selected;
+    if (button.selected) {
+        [self.mapView setMapType:MKMapTypeSatellite];
+    } else {
+        [self.mapView setMapType:MKMapTypeStandard];
+    }
+}
 
 - (void)generateRandomLocationWithRegion:(MKCoordinateRegion)region {
 //    CLLocationCoordinate2D coord = self.currentCoord;
@@ -192,7 +251,7 @@
 //        [annotations addObject:annotation];
 //    }
 //    [self.mapView addAnnotations:annotations];
-//    
+//
 //    self.hasUpdatedAnnotes = YES;
     
     //增加制定虚拟点
@@ -241,6 +300,22 @@
     annotation9.title = @"Chow Chinese Restaurant  98 Byres Road, Glasgow, G12 8TB";
     annotation9.coordinate = CLLocationCoordinate2DMake(55.872996, -4.295831);
     [self.mapView addAnnotation:annotation9];
+    
+    MKPointAnnotation *annotation10 = [[MKPointAnnotation alloc] init];
+    annotation10.title = @"Sandyford Hotel";
+    annotation10.coordinate = CLLocationCoordinate2DMake(55.865881, -4.285766);
+    [self.mapView addAnnotation:annotation10];
+    
+    MKPointAnnotation *annotation11 = [[MKPointAnnotation alloc] init];
+    annotation11.title = @"The Park Bar";
+    annotation11.coordinate = CLLocationCoordinate2DMake(55.865783, -4.287242);
+    [self.mapView addAnnotation:annotation11];
+    
+    MKPointAnnotation *annotation12 = [[MKPointAnnotation alloc] init];
+    annotation12.title = @"iMart Oriental";
+    annotation12.coordinate = CLLocationCoordinate2DMake(55.863717, -4.257709);
+    [self.mapView addAnnotation:annotation12];
+    
 }
 
 - (void)showLocationDetailView:(BOOL)show {
@@ -263,6 +338,42 @@
     }];
 }
 
+- (void)LocationDetailView:(LocationDetailView *)view didClickNavigateToCord:(CLLocationCoordinate2D)location cancel:(BOOL)cancel {
+    if (!cancel) {
+        CLLocationCoordinate2D commonPolylineCoords[2];
+        commonPolylineCoords[0] = location;
+        commonPolylineCoords[1] = self.currentCoord;
+        MKPolyline *commonPolyline = [MKPolyline polylineWithCoordinates:commonPolylineCoords count:2];
+        [self.mapView addOverlay:commonPolyline];
+        self.line = commonPolyline;
+        
+        //增加item
+        self.rightItems = self.navigationItem.rightBarButtonItems;
+        self.leftItems = self.navigationItem.leftBarButtonItems;
+        self.navigationItem.rightBarButtonItems = @[self.compassItem, self.navigateItem];
+        self.navigationItem.leftBarButtonItems = nil;
+        
+        for (id<MKAnnotation> annotation in self.mapView.annotations) {
+            if (!(annotation == self.selectedAnnotation)) {
+                [self.mapView removeAnnotation:annotation];
+            }
+        }
+        
+    } else {
+        [self.mapView removeOverlay:self.line];
+        
+        self.navigationItem.rightBarButtonItems = self.rightItems;
+        self.navigationItem.leftBarButtonItems = self.leftItems;
+        
+        for (id<MKAnnotation> annotation in self.annotations) {
+            if (annotation != self.selectedAnnotation) {
+                [self.mapView addAnnotation:annotation];
+            }
+        }
+
+    }
+}
+
 //- (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray<MKAnnotationView *> *)views
 
 - (void)mapView:(MKMapView *)mapView didAddAnnotationViews:(NSArray *)views {
@@ -271,16 +382,19 @@
         view.canShowCallout = NO;
         CLLocationCoordinate2D coord = view.annotation.coordinate;
         self.currentCoord = coord;
+        [DataManager shared].currentLocation = self.currentCoord;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self generateRandomLocationWithRegion:mapView.region];
         });
     }
+
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[MKPointAnnotation class]])
     {
+        [self.annotations addObject:annotation];
 //        NSArray *imageNames = @[@"001", @"002", @"003
         static NSString *pointReuseIndentifier = @"pointReuseIndentifier";
         MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:pointReuseIndentifier];
@@ -294,7 +408,7 @@
             ran = 2;
         } else if ([annotation.title isEqualToString:@"University of Glasgow"] || [annotation.title isEqualToString:@"Kelvingrove Art Gallery and Museum"] || [annotation.title isEqualToString:@"George Square"] || [annotation.title isEqualToString:@"Gallery of Modern Art"]) {
             ran = 1;
-        } else if ([annotation.title isEqualToString:@"G12 Cafe 42 University Ave, Glasgow, G12 8NN"] || [annotation.title isEqualToString:@"Chow Chinese Restaurant  98 Byres Road, Glasgow, G12 8TB"]) {
+        } else if ([annotation.title isEqualToString:@"G12 Cafe 42 University Ave, Glasgow, G12 8NN"] || [annotation.title isEqualToString:@"Chow Chinese Restaurant  98 Byres Road, Glasgow, G12 8TB"] || [annotation.title isEqualToString:@"Sandyford Hotel"] || [annotation.title isEqualToString:@"iMart Oriental"] || [annotation.title isEqualToString:@"The Park Bar"]) {
             ran = 0;
         }
 
@@ -336,12 +450,27 @@
         model.locDistance = [NSString stringWithFormat:@"%.1fkm", distance * 0.001];
     }
     self.locationDetailView.dataSource = model;
+    self.locationDetailView.locationCoord = view.annotation.coordinate;
+    self.selectedAnnotation = view.annotation;
     [self showLocationDetailView:YES];
 }
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
     view.image = [UIImage imageNamed:self.mapIcons[view.tag]];
     [self showLocationDetailView:NO];
+}
+
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay {
+    if ([overlay isKindOfClass:[MKPolyline class]])
+    {
+        MKPolylineRenderer *polylineRenderer = [[MKPolylineRenderer alloc] initWithPolyline:overlay];
+        
+        polylineRenderer.lineWidth    = 8.f;
+        polylineRenderer.strokeColor  = ColorWithRGB(33, 150, 243, 0.7);
+        
+        return polylineRenderer;
+    }
+    return nil;
 }
 
 #pragma mark - uitableview
@@ -353,6 +482,28 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ListTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"listCell"];
     return cell;
+}
+
+- (void)navToDesClick {
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"Google Map" style:UIAlertActionStyleDefault handler:nil]];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"Maps" style:UIAlertActionStyleDefault handler:nil]];
+    [alertVC addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [self presentViewController:alertVC animated:YES completion:nil];
+    
+}
+
+- (void)compassClick {
+    CompassViewController *compassVC = [[CompassViewController alloc] init];
+    compassVC.annotation = self.selectedAnnotation;
+    
+    CLLocationCoordinate2D coord = self.selectedAnnotation.coordinate;
+    MKMapPoint selectedPoint = MKMapPointForCoordinate(coord);
+    MKMapPoint currentPint = MKMapPointForCoordinate(self.currentCoord);
+    CLLocationDistance distance = MKMetersBetweenMapPoints(selectedPoint, currentPint);
+    compassVC.distance = distance;
+    GeneticNavViewController *nav = [[GeneticNavViewController alloc] initWithRootViewController:compassVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 @end

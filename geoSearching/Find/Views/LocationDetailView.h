@@ -7,11 +7,14 @@
 
 #import <UIKit/UIKit.h>
 #import "LocationInfoModel.h"
+#import <CoreLocation/CoreLocation.h>
 @class LocationDetailView;
 
 @protocol LocationDetailViewDelegate<NSObject>
 
 - (void)LocationDetailView:(LocationDetailView *)view didClickToShow:(BOOL)showShow;
+
+- (void)LocationDetailView:(LocationDetailView *)view didClickNavigateToCord:(CLLocationCoordinate2D)location cancel:(BOOL)cancel;
 
 @end
 
@@ -22,5 +25,7 @@
 @property (nonatomic, assign) NSInteger type;
 
 @property (nonatomic, strong) LocationInfoModel *dataSource;
+
+@property (nonatomic, assign) CLLocationCoordinate2D locationCoord;
 
 @end

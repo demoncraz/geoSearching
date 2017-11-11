@@ -10,6 +10,9 @@
 		3D1DE1571FB5E15500B4E0E9 /* CompassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE1551FB5E15500B4E0E9 /* CompassViewController.m */; };
 		3D1DE1581FB5E15500B4E0E9 /* CompassViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DE1561FB5E15500B4E0E9 /* CompassViewController.xib */; };
 		3D1DE15B1FB5F72900B4E0E9 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE15A1FB5F72900B4E0E9 /* DataManager.m */; };
+		3D1DE15F1FB73FCD00B4E0E9 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE15D1FB73FCD00B4E0E9 /* MessageTableViewCell.m */; };
+		3D1DE1601FB73FCD00B4E0E9 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DE15E1FB73FCD00B4E0E9 /* MessageTableViewCell.xib */; };
+		3D1DE1631FB741A800B4E0E9 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE1621FB741A800B4E0E9 /* MessageModel.m */; };
 		3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA40A1FA8CADE00284D55 /* Constants.m */; };
 		3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */; };
 		3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */; };
@@ -59,6 +62,11 @@
 		3D1DE1561FB5E15500B4E0E9 /* CompassViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CompassViewController.xib; sourceTree = "<group>"; };
 		3D1DE1591FB5F72900B4E0E9 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		3D1DE15A1FB5F72900B4E0E9 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		3D1DE15C1FB73FCD00B4E0E9 /* MessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageTableViewCell.h; sourceTree = "<group>"; };
+		3D1DE15D1FB73FCD00B4E0E9 /* MessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewCell.m; sourceTree = "<group>"; };
+		3D1DE15E1FB73FCD00B4E0E9 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
+		3D1DE1611FB741A800B4E0E9 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
+		3D1DE1621FB741A800B4E0E9 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
 		3D7FA4091FA8CADE00284D55 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3D7FA40A1FA8CADE00284D55 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3D7FA40F1FA8CC8900284D55 /* LocationDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailView.h; sourceTree = "<group>"; };
@@ -183,6 +191,11 @@
 			children = (
 				52AFBAC91FAA0082000D2100 /* MessageViewController.h */,
 				52AFBACA1FAA0082000D2100 /* MessageViewController.m */,
+				3D1DE15C1FB73FCD00B4E0E9 /* MessageTableViewCell.h */,
+				3D1DE15D1FB73FCD00B4E0E9 /* MessageTableViewCell.m */,
+				3D1DE15E1FB73FCD00B4E0E9 /* MessageTableViewCell.xib */,
+				3D1DE1611FB741A800B4E0E9 /* MessageModel.h */,
+				3D1DE1621FB741A800B4E0E9 /* MessageModel.m */,
 			);
 			path = Mesasge;
 			sourceTree = "<group>";
@@ -370,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E2ABAE1FA8B87800AECD4F /* LocationDetailTableViewCell.xib in Resources */,
+				3D1DE1601FB73FCD00B4E0E9 /* MessageTableViewCell.xib in Resources */,
 				52E2AB911FA8890C00AECD4F /* LaunchScreen.storyboard in Resources */,
 				3DBFD7631FAB5DCF0001DC04 /* FilterTableViewController.storyboard in Resources */,
 				52E2AB8E1FA8890C00AECD4F /* Assets.xcassets in Resources */,
@@ -463,12 +477,14 @@
 				3D1DE15B1FB5F72900B4E0E9 /* DataManager.m in Sources */,
 				52AFBACB1FAA0083000D2100 /* MessageViewController.m in Sources */,
 				3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */,
+				3D1DE15F1FB73FCD00B4E0E9 /* MessageTableViewCell.m in Sources */,
 				3DBFD75D1FAB56E30001DC04 /* SearchMainViewController.m in Sources */,
 				52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */,
 				52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */,
 				52E2AB941FA8890C00AECD4F /* main.m in Sources */,
 				3DBFD76D1FAB8E3E0001DC04 /* TraditionalTableViewController.m in Sources */,
 				52E2AB861FA8890C00AECD4F /* AppDelegate.m in Sources */,
+				3D1DE1631FB741A800B4E0E9 /* MessageModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

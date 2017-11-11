@@ -48,17 +48,28 @@
                                 <color key="textColor" red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="srs-QS-oiY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ycm-Fm-Lz4" firstAttribute="centerX" secondItem="0Eu-w0-5A9" secondAttribute="centerX" id="E7c-ov-kZN"/>
                             <constraint firstItem="ycm-Fm-Lz4" firstAttribute="centerY" secondItem="0Eu-w0-5A9" secondAttribute="centerY" id="GrM-hI-Qjt"/>
+                            <constraint firstAttribute="bottom" secondItem="srs-QS-oiY" secondAttribute="bottom" id="Zrw-BL-vIL"/>
+                            <constraint firstItem="srs-QS-oiY" firstAttribute="leading" secondItem="0Eu-w0-5A9" secondAttribute="leading" id="azA-4N-QCy"/>
+                            <constraint firstItem="srs-QS-oiY" firstAttribute="top" secondItem="qwY-vj-mzV" secondAttribute="top" id="fVT-Bx-91q"/>
+                            <constraint firstItem="qwY-vj-mzV" firstAttribute="trailing" secondItem="srs-QS-oiY" secondAttribute="trailing" id="jjM-6r-lmF"/>
                             <constraint firstItem="1e7-xa-QrR" firstAttribute="top" secondItem="ycm-Fm-Lz4" secondAttribute="bottom" constant="20" id="q8D-cN-eq4"/>
                             <constraint firstItem="1e7-xa-QrR" firstAttribute="centerX" secondItem="ycm-Fm-Lz4" secondAttribute="centerX" id="rCH-0J-vv4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qwY-vj-mzV"/>
                     </view>
                     <navigationItem key="navigationItem" id="w2Q-mc-1MC"/>
+                    <connections>
+                        <outlet property="tableView" destination="srs-QS-oiY" id="l5O-t4-uxP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fEb-5w-Of7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +130,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-vf-ceH">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-vf-ceH">
                                                     <rect key="frame" x="137.5" y="50" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="Chf-3l-Ywm"/>
@@ -432,7 +443,7 @@
         <image name="message" width="20" height="20"/>
         <image name="message_bg" width="140" height="140"/>
         <image name="message_disable" width="20" height="20"/>
-        <image name="posterIcon" width="220" height="220"/>
+        <image name="posterIcon" width="148" height="201"/>
         <image name="profile" width="17" height="20"/>
         <image name="profile_disable" width="17" height="20"/>
         <image name="task" width="23" height="23"/>

@@ -9,8 +9,10 @@
 
 @interface LocationDetailTableViewCell : UITableViewCell
 
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, copy) NSString *number;
 
 @property (nonatomic, copy) NSString *image;
+
+@property (nonatomic, assign) BOOL shouldShowComment;
 
 @end

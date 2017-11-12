@@ -316,6 +316,12 @@
     annotation12.coordinate = CLLocationCoordinate2DMake(55.863717, -4.257709);
     [self.mapView addAnnotation:annotation12];
     
+    MKPointAnnotation *annotation13 = [[MKPointAnnotation alloc] init];
+    annotation13.title = @"Glasgow Libraries : The Mitchell Library";
+    annotation13.coordinate = CLLocationCoordinate2DMake(55 + 51.867 / 60.0, -4 - 16.448 / 60.0);
+    [self.mapView addAnnotation:annotation13];
+
+    
 }
 
 - (void)showLocationDetailView:(BOOL)show {
@@ -404,7 +410,7 @@
         view.canShowCallout = NO;
         view.draggable = NO;
         NSInteger ran = arc4random_uniform(3);
-        if ([annotation.title isEqualToString:@"Squiggly Bridge"] || [annotation.title isEqualToString:@"A Grove by the Kelvin"] || [annotation.title isEqualToString:@"Glasgow Riverside Museum"]) {
+        if ([annotation.title isEqualToString:@"Squiggly Bridge"] || [annotation.title isEqualToString:@"A Grove by the Kelvin"] || [annotation.title isEqualToString:@"Glasgow Riverside Museum"] || [annotation.title isEqualToString:@"Glasgow Libraries : The Mitchell Library"]) {
             ran = 2;
         } else if ([annotation.title isEqualToString:@"University of Glasgow"] || [annotation.title isEqualToString:@"Kelvingrove Art Gallery and Museum"] || [annotation.title isEqualToString:@"George Square"] || [annotation.title isEqualToString:@"Gallery of Modern Art"]) {
             ran = 1;
@@ -505,5 +511,6 @@
     GeneticNavViewController *nav = [[GeneticNavViewController alloc] initWithRootViewController:compassVC];
     [self presentViewController:nav animated:YES completion:nil];
 }
+
 
 @end

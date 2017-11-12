@@ -28,6 +28,8 @@
 
 @property (nonatomic, assign) NSInteger detailType;
 
+@property (nonatomic, strong) NSString *number;
+
 + (instancetype)randomModel;
 
 + (instancetype)modelWithTitle:(NSString *)title;

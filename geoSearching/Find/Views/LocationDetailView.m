@@ -45,6 +45,7 @@ static NSString * const postInfoCellId = @"postInfoCellId";
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(titleTapped)];
         [self.titleView addGestureRecognizer:tap];
+        self.tableView.allowsSelection = NO;
         
         self.viewHidden = YES;
     }
@@ -72,6 +73,12 @@ static NSString * const postInfoCellId = @"postInfoCellId";
         LocationDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:detailCellId];
 //        cell.type = self.dataSource.detailType;
         cell.image = self.dataSource.detailImage;
+        if ([self.dataSource.locTitle isEqualToString:@"A Grove by the Kelvin"]) {
+            cell.shouldShowComment = YES;
+        } else {
+            cell.shouldShowComment = NO;
+        }
+        cell.number = self.dataSource.number;
         return cell;
     } else if (indexPath.row == 1) {
         LocationDescriptionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:descriptionCellId];

@@ -78,7 +78,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="K6G-XG-KMY">
             <objects>
-                <tabBarController id="tlF-T2-cMF" sceneMemberID="viewController">
+                <tabBarController hidesBottomBarWhenPushed="YES" id="tlF-T2-cMF" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QfF-Xm-Pwn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -130,7 +130,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="posterIcon" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-vf-ceH">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="huntr" translatesAutoresizingMaskIntoConstraints="NO" id="AT4-vf-ceH">
                                                     <rect key="frame" x="137.5" y="50" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="100" id="Chf-3l-Ywm"/>
@@ -153,7 +153,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you Huntr for Business?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIE-bV-sU8">
-                                                    <rect key="frame" x="94" y="21" width="186.5" height="18"/>
+                                                    <rect key="frame" x="94.5" y="21" width="186.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -254,12 +254,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="Qsp-XL-oRX"/>
                     <connections>
+                        <outlet property="businessiew" destination="j7j-tr-qcx" id="kfO-Fq-xwN"/>
                         <outlet property="iconImageVIew" destination="AT4-vf-ceH" id="0Ym-aU-nLJ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YI5-PH-QLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-620" y="303.59820089955025"/>
+            <point key="canvasLocation" x="-703" y="382"/>
         </scene>
         <!--Huntr-->
         <scene sceneID="TbU-oo-gHf">
@@ -437,13 +438,13 @@
     <resources>
         <image name="discover" width="22" height="20"/>
         <image name="discover_disable" width="22" height="20"/>
+        <image name="huntr" width="1600" height="1600"/>
         <image name="listIcon" width="23" height="23"/>
         <image name="local" width="16" height="20"/>
         <image name="local_disable" width="16" height="20"/>
         <image name="message" width="20" height="20"/>
         <image name="message_bg" width="140" height="140"/>
         <image name="message_disable" width="20" height="20"/>
-        <image name="posterIcon" width="148" height="201"/>
         <image name="profile" width="17" height="20"/>
         <image name="profile_disable" width="17" height="20"/>
         <image name="task" width="23" height="23"/>

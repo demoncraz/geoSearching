@@ -13,6 +13,11 @@
 		3D1DE15F1FB73FCD00B4E0E9 /* MessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE15D1FB73FCD00B4E0E9 /* MessageTableViewCell.m */; };
 		3D1DE1601FB73FCD00B4E0E9 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DE15E1FB73FCD00B4E0E9 /* MessageTableViewCell.xib */; };
 		3D1DE1631FB741A800B4E0E9 /* MessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE1621FB741A800B4E0E9 /* MessageModel.m */; };
+		3D1DE1661FB89B9800B4E0E9 /* ListViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE1651FB89B9800B4E0E9 /* ListViewControllerTableViewController.m */; };
+		3D1DE1691FB89D8D00B4E0E9 /* BusinessNewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE1681FB89D8D00B4E0E9 /* BusinessNewTableViewController.m */; };
+		3D1DE16C1FB89DA000B4E0E9 /* BusinessManagementTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE16B1FB89DA000B4E0E9 /* BusinessManagementTableViewController.m */; };
+		3D1DE1701FB89E1000B4E0E9 /* BusinessNewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1DE16E1FB89E1000B4E0E9 /* BusinessNewTableViewCell.m */; };
+		3D1DE1711FB89E1000B4E0E9 /* BusinessNewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1DE16F1FB89E1000B4E0E9 /* BusinessNewTableViewCell.xib */; };
 		3D7FA40B1FA8CADE00284D55 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA40A1FA8CADE00284D55 /* Constants.m */; };
 		3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D7FA4101FA8CC8900284D55 /* LocationDetailView.m */; };
 		3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D7FA4121FA8CCA500284D55 /* LocationDetailView.xib */; };
@@ -67,6 +72,15 @@
 		3D1DE15E1FB73FCD00B4E0E9 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		3D1DE1611FB741A800B4E0E9 /* MessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MessageModel.h; sourceTree = "<group>"; };
 		3D1DE1621FB741A800B4E0E9 /* MessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MessageModel.m; sourceTree = "<group>"; };
+		3D1DE1641FB89B9800B4E0E9 /* ListViewControllerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewControllerTableViewController.h; sourceTree = "<group>"; };
+		3D1DE1651FB89B9800B4E0E9 /* ListViewControllerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewControllerTableViewController.m; sourceTree = "<group>"; };
+		3D1DE1671FB89D8D00B4E0E9 /* BusinessNewTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessNewTableViewController.h; sourceTree = "<group>"; };
+		3D1DE1681FB89D8D00B4E0E9 /* BusinessNewTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessNewTableViewController.m; sourceTree = "<group>"; };
+		3D1DE16A1FB89DA000B4E0E9 /* BusinessManagementTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessManagementTableViewController.h; sourceTree = "<group>"; };
+		3D1DE16B1FB89DA000B4E0E9 /* BusinessManagementTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessManagementTableViewController.m; sourceTree = "<group>"; };
+		3D1DE16D1FB89E1000B4E0E9 /* BusinessNewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessNewTableViewCell.h; sourceTree = "<group>"; };
+		3D1DE16E1FB89E1000B4E0E9 /* BusinessNewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessNewTableViewCell.m; sourceTree = "<group>"; };
+		3D1DE16F1FB89E1000B4E0E9 /* BusinessNewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessNewTableViewCell.xib; sourceTree = "<group>"; };
 		3D7FA4091FA8CADE00284D55 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3D7FA40A1FA8CADE00284D55 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3D7FA40F1FA8CC8900284D55 /* LocationDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDetailView.h; sourceTree = "<group>"; };
@@ -150,6 +164,13 @@
 			children = (
 				3DBFD7571FAA32AD0001DC04 /* ProfileTableViewController.h */,
 				3DBFD7581FAA32AD0001DC04 /* ProfileTableViewController.m */,
+				3D1DE1671FB89D8D00B4E0E9 /* BusinessNewTableViewController.h */,
+				3D1DE1681FB89D8D00B4E0E9 /* BusinessNewTableViewController.m */,
+				3D1DE16A1FB89DA000B4E0E9 /* BusinessManagementTableViewController.h */,
+				3D1DE16B1FB89DA000B4E0E9 /* BusinessManagementTableViewController.m */,
+				3D1DE16D1FB89E1000B4E0E9 /* BusinessNewTableViewCell.h */,
+				3D1DE16E1FB89E1000B4E0E9 /* BusinessNewTableViewCell.m */,
+				3D1DE16F1FB89E1000B4E0E9 /* BusinessNewTableViewCell.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -167,6 +188,8 @@
 				3DBFD76F1FAB8E460001DC04 /* ActTableViewController.m */,
 				3DBFD7711FAB8E4E0001DC04 /* CouponTableViewController.h */,
 				3DBFD7721FAB8E4E0001DC04 /* CouponTableViewController.m */,
+				3D1DE1641FB89B9800B4E0E9 /* ListViewControllerTableViewController.h */,
+				3D1DE1651FB89B9800B4E0E9 /* ListViewControllerTableViewController.m */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -391,6 +414,7 @@
 				52E2ABB31FA8B95300AECD4F /* LocationDescriptionTableViewCell.xib in Resources */,
 				3D7FA4131FA8CCA500284D55 /* LocationDetailView.xib in Resources */,
 				52E2ABB81FA8B9BA00AECD4F /* LocationPosterTableViewCell.xib in Resources */,
+				3D1DE1711FB89E1000B4E0E9 /* BusinessNewTableViewCell.xib in Resources */,
 				3DBFD75E1FAB56E30001DC04 /* SearchMainViewController.xib in Resources */,
 				3DBFD7681FAB67180001DC04 /* ListTableViewCell.xib in Resources */,
 				3D1DE1581FB5E15500B4E0E9 /* CompassViewController.xib in Resources */,
@@ -468,11 +492,13 @@
 				3DBFD7871FAB94200001DC04 /* TaskBaseTableViewController.m in Sources */,
 				3DBFD7611FAB5DC00001DC04 /* FilterTableViewController.m in Sources */,
 				3DBFD7591FAA32AD0001DC04 /* ProfileTableViewController.m in Sources */,
+				3D1DE1661FB89B9800B4E0E9 /* ListViewControllerTableViewController.m in Sources */,
 				52E2ABB21FA8B95300AECD4F /* LocationDescriptionTableViewCell.m in Sources */,
 				3DBFD7701FAB8E460001DC04 /* ActTableViewController.m in Sources */,
 				52E2AB9C1FA8958200AECD4F /* GeneticNavViewController.m in Sources */,
 				3DBFD7731FAB8E4E0001DC04 /* CouponTableViewController.m in Sources */,
 				3DBFD7561FAA32A20001DC04 /* DiscoverTableViewController.m in Sources */,
+				3D1DE16C1FB89DA000B4E0E9 /* BusinessManagementTableViewController.m in Sources */,
 				3D7FA4111FA8CC8900284D55 /* LocationDetailView.m in Sources */,
 				3D1DE15B1FB5F72900B4E0E9 /* DataManager.m in Sources */,
 				52AFBACB1FAA0083000D2100 /* MessageViewController.m in Sources */,
@@ -481,7 +507,9 @@
 				3DBFD75D1FAB56E30001DC04 /* SearchMainViewController.m in Sources */,
 				52E2ABA41FA8B26C00AECD4F /* LocationInfoModel.m in Sources */,
 				52E2AB891FA8890C00AECD4F /* ViewController.m in Sources */,
+				3D1DE1691FB89D8D00B4E0E9 /* BusinessNewTableViewController.m in Sources */,
 				52E2AB941FA8890C00AECD4F /* main.m in Sources */,
+				3D1DE1701FB89E1000B4E0E9 /* BusinessNewTableViewCell.m in Sources */,
 				3DBFD76D1FAB8E3E0001DC04 /* TraditionalTableViewController.m in Sources */,
 				52E2AB861FA8890C00AECD4F /* AppDelegate.m in Sources */,
 				3D1DE1631FB741A800B4E0E9 /* MessageModel.m in Sources */,

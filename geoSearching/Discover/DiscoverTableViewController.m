@@ -11,6 +11,7 @@
 #import "TraditionalTableViewController.h"
 #import "ActTableViewController.h"
 #import "CouponTableViewController.h"
+#import "ListViewControllerTableViewController.h"
 
 @interface DiscoverTableViewController ()
 
@@ -39,8 +40,12 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 1) {//task
         
-        CCTopTabViewController *vc = [[CCTopTabViewController alloc] initWithTitles:@[@"Traditional", @"Activity", @"Coupon"] viewControllers:@[[[TraditionalTableViewController alloc] init], [[ActTableViewController alloc] init], [[CouponTableViewController alloc] init]] shouldHideNavigationBar:NO];
+        CCTopTabViewController *vc = [[CCTopTabViewController alloc] initWithTitles:@[@"Traditional", @"Activities", @"Coupons"] viewControllers:@[[[TraditionalTableViewController alloc] init], [[ActTableViewController alloc] init], [[CouponTableViewController alloc] init]] shouldHideNavigationBar:NO];
         vc.title = @"Tasks";
+        [self.navigationController pushViewController:vc animated:YES];
+    } else if (indexPath.section == 2) {
+        ListViewControllerTableViewController *vc = [[ListViewControllerTableViewController alloc] init];
+        vc.title = @"Lists";
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
